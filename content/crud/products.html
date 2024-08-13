@@ -1,9 +1,10 @@
 ---
-title: Tailwind CSS Products Page - Flowbite
+title: MotoDrive - Motos
 description: Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more
 layout: dashboard
 group: crud
 ---
+
 <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5 dark:bg-gray-800 dark:border-gray-700">
     <div class="w-full mb-1">
         <div class="mb-4">
@@ -12,31 +13,31 @@ group: crud
                   <li class="inline-flex items-center">
                     <a href="#" class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white">
                       <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                      Home
+                      Inicio
                     </a>
                   </li>
                   <li>
                     <div class="flex items-center">
                       <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                      <a href="#" class="ml-1 text-gray-700 hover:text-primary-600 md:ml-2 dark:text-gray-300 dark:hover:text-white">E-commerce</a>
+                      <a href="#" class="ml-1 text-gray-700 hover:text-primary-600 md:ml-2 dark:text-gray-300 dark:hover:text-white">Vehículos</a>
                     </div>
                   </li>
                   <li>
                     <div class="flex items-center">
                       <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                      <span class="ml-1 text-gray-400 md:ml-2 dark:text-gray-500" aria-current="page">Products</span>
+                      <span class="ml-1 text-gray-400 md:ml-2 dark:text-gray-500" aria-current="page">Motos</span>
                     </div>
                   </li>
                 </ol>
             </nav>
-            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">All products</h1>
+            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">Todos los vehículos</h1>
         </div>
         <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
             <div class="flex items-center mb-4 sm:mb-0">
                 <form class="sm:pr-3" action="#" method="GET">
-                    <label for="products-search" class="sr-only">Search</label>
+                    <label for="products-search" class="sr-only">Buscar</label>
                     <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
-                        <input type="text" name="email" id="products-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search for products">
+                        <input type="text" name="email" id="products-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vehículo">
                     </div>
                 </form>
                 <div class="flex items-center w-full sm:justify-end">
@@ -56,9 +57,12 @@ group: crud
                     </div>
                 </div>
             </div>
-            <button id="createProductButton" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800" type="button" data-drawer-target="drawer-create-product-default" data-drawer-show="drawer-create-product-default" aria-controls="drawer-create-product-default" data-drawer-placement="right">
-                Add new product
-            </button>
+            <button id="createProductButton" class="inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800" type="button" data-modal-target="modal-create-product" data-modal-toggle="modal-create-product" aria-controls="modal-create-product">
+                <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                </svg>
+                Nuevo vehículo
+              </button>
         </div>
     </div>
 </div>
@@ -66,72 +70,51 @@ group: crud
     <div class="overflow-x-auto">
         <div class="inline-block min-w-full align-middle">
             <div class="overflow-hidden shadow">
-                <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600">
+              <table class="min-w-full divide-y divide-gray-200 table-auto dark:divide-gray-600">
                     <thead class="bg-gray-100 dark:bg-gray-700">
-                        <tr>
-                            <th scope="col" class="p-4">
-                                <div class="flex items-center">
-                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-all" class="sr-only">checkbox</label>
-                                </div>
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                Product Name
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                Technology
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                Description
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                ID
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                Price
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                Discount
-                            </th>
-                            <th scope="col" class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">
-                                Actions
-                            </th>
-                        </tr>
+                      <tr>
+                        <th scope="col" class="p-4">
+                          <div class="flex items-center justify-center">
+                            <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="checkbox-all" class="sr-only">checkbox</label>
+                          </div>              
+                        </th>
+                        <th scope="col" class="p-2 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap sm:w-1/4">
+                            N°
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Marca
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Modelo
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Placa
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Año Fabricación
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Año Modelo
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Precio (S/.)
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            N° de Serie
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Descripción
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Condición
+                        </th>
+                        <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                            Acciones
+                        </th>
+                    </tr>                    
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
-                        {{< products.inline >}}
-                        {{- range (index $.Site.Data "products") }}
-                        <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
-                            <td class="w-4 p-4">
-                                <div class="flex items-center">
-                                    <input id="checkbox-{{ .id }}" aria-describedby="checkbox-1" type="checkbox"
-                                        class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="checkbox-{{ .id }}" class="sr-only">checkbox</label>
-                                </div>
-                            </td>
-                            <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                <div class="text-base font-semibold text-gray-900 dark:text-white">{{ .name }}</div>
-                                <div class="text-sm font-normal text-gray-500 dark:text-gray-400">{{ .category }}</div>
-                            </td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ .technology }}</td>
-                            <td class="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400">{{ .description }}</td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">#{{ .id }}</td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ .price }}</td>
-                            <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ .discount }}</td>
-
-                            <td class="p-4 space-x-2 whitespace-nowrap">
-                                <button type="button" id="updateProductButton" data-drawer-target="drawer-update-product-default" data-drawer-show="drawer-update-product-default" aria-controls="drawer-update-product-default" data-drawer-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                    Update
-                                </button>
-                                <button type="button" id="deleteProductButton" data-drawer-target="drawer-delete-product-default" data-drawer-show="drawer-delete-product-default" aria-controls="drawer-delete-product-default" data-drawer-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
-                                    Delete item
-                                </button>
-                            </td>
-                        </tr>
-                        {{ end -}}
-                        {{< /products.inline >}}                       
+                    <tbody id="motos-tbody" class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
                     </tbody>
                 </table>
             </div>
@@ -147,15 +130,15 @@ group: crud
         <a href="#" class="inline-flex justify-center p-1 mr-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
         </a>
-        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing <span class="font-semibold text-gray-900 dark:text-white">1-20</span> of <span class="font-semibold text-gray-900 dark:text-white">2290</span></span>
+        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Mostrando <span class="font-semibold text-gray-900 dark:text-white">1-20</span> de <span class="font-semibold text-gray-900 dark:text-white">100</span></span>
     </div>
     <div class="flex items-center space-x-3">
         <a href="#" class="inline-flex items-center justify-center flex-1 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
             <svg class="w-5 h-5 mr-1 -ml-1"" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Previous
+            Anterior
         </a>
         <a href="#" class="inline-flex items-center justify-center flex-1 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-            Next
+            Siguiente
             <svg class="w-5 h-5 ml-1 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
         </a>
     </div>
@@ -163,7 +146,7 @@ group: crud
 
 <!-- Edit Product Drawer -->
 <div id="drawer-update-product-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
-    <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Update Product</h5>
+    <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Actualizar Registro</h5>
     <button type="button" data-drawer-dismiss="drawer-update-product-default" aria-controls="drawer-update-product-default" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
@@ -171,46 +154,66 @@ group: crud
     <form action="#">
         <div class="space-y-4">
             <div>
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                <input type="text" name="title" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="Education Dashboard" placeholder="Type product name" required="">
-            </div>
-            <div>
-                <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Technology</label>
-                <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                    <option selected="">Flowbite</option>
-                    <option value="RE">React</option>
-                    <option value="AN">Angular</option>
-                    <option value="VU">Vue JS</option>
+                <label for="marca" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+                <select id="marca" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                    <option selected="">Seleccionar una marca</option>
+                    <option value="FL">Honda</option>
+                    <option value="RE">Yamaha</option>
+                    <option value="AN">Wanxin</option>
+                    <option value="VU">KTM</option>
                 </select>
             </div>
             <div>
-                <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
-                <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" value="2999" placeholder="$149" required="">
+                <label for="modelo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelo</label>
+                <select id="modelo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                    <option selected="">Seleccionar un modelo</option>
+                    <option value="FL">CBF-125 Twister</option>
+                    <option value="RE">CB-190</option>
+                    <option value="AN">XR-150</option>
+                    <option value="VU">XR-190</option>
+                </select>
             </div>
             <div>
-                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter event description here">Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.</textarea>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Año de Fabricación</label>
+                <input type="text" name="title" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresa el año de Fabricación" required="">
             </div>
             <div>
-                <label for="discount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Discount</label>
-                <select id="discount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                    <option selected="">No</option>
-                    <option value="5">5%</option>
-                    <option value="10">10%</option>
-                    <option value="20">20%</option>
-                    <option value="30">30%</option>
-                    <option value="40">40%</option>
-                    <option value="50">50%</option>
+                <label for="yearmodel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Año de Modelo</label>
+                <input type="text" name="title" id="yearmodel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresa el año de Modelo" required="">
+            </div>
+            <div>
+                <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio (S/.)</label>
+                <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="S/.000000" required="">
+            </div>
+            <div>
+                <label for="numero_serie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">N° de Serie</label>
+                <input type="number" name="numero_serie" id="numero_serie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="000000" required="">
+            </div>
+            <div>
+                <label for="placa_rodaje" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Placa</label>
+                <input type="number" name="placa_rodaje" id="placa_rodaje" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="000000" required="">
+            </div>
+            <div>
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción</label>
+                <textarea id="description" rows="3" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter event description here"></textarea>
+            </div>
+            <div>
+                <label for="category-create" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Condicíon del Vehículo</label>
+                <select id="category-create" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                    <option selected="">Seleccionar Condición</option>
+                    <option value="FL">Usado</option>
+                    <option value="RE">Nuevo</option>
+                    <option value="AN">Seminuevo</option>
                 </select>
             </div>
         </div>
         <div class="bottom-0 left-0 flex justify-center w-full pb-4 mt-4 space-x-4 sm:absolute sm:px-4 sm:mt-0">
             <button type="submit" class="w-full justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                Update
+                Actualizar
             </button>
             <button type="button" class="w-full justify-center text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
                 <svg aria-hidden="true" class="w-5 h-5 mr-1 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
-                Delete
+                Eliminar
             </button>
         </div>
     </form>
@@ -219,75 +222,476 @@ group: crud
 
 <!-- Delete Product Drawer -->
 <div id="drawer-delete-product-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
-    <h5 id="drawer-label" class="inline-flex items-center text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Delete item</h5>
+    <h5 id="drawer-label" class="inline-flex items-center text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Eliminar Registro</h5>
     <button type="button" data-drawer-dismiss="drawer-delete-product-default" aria-controls="drawer-delete-product-default" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Close menu</span>
     </button>
     <svg class="w-10 h-10 mt-8 mb-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-    <h3 class="mb-6 text-lg text-gray-500 dark:text-gray-400">Are you sure you want to delete this product?</h3>
+    <h3 class="mb-6 text-lg text-gray-500 dark:text-gray-400">Está seguro que desea eliminar este registro?</h3>
     <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2.5 text-center mr-2 dark:focus:ring-red-900">
-        Yes, I'm sure
+        Si, Estoy seguro
     </a>
     <a href="#" class="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 border border-gray-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2.5 text-center dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700" data-drawer-hide="drawer-delete-product-default">
-        No, cancel
+        No, cancelar
     </a>
 </div>
 
 
-<!-- Add Product Drawer -->
-<div id="drawer-create-product-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
-    <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">New Product</h5>
-    <button type="button" data-drawer-dismiss="drawer-create-product-default" aria-controls="drawer-create-product-default" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
-        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        <span class="sr-only">Close menu</span>
+<!-- Add Product Modal -->
+<div id="modal-create-product" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-800 bg-opacity-50 hidden">
+  <div class="relative w-full max-w-3xl bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+      <h5 id="modal-label" class="mb-6 text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+              <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0 1 12 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 0 1 3.498 1.307 4.491 4.491 0 0 1 1.307 3.497A4.49 4.49 0 0 1 21.75 12a4.49 4.49 0 0 1-1.549 3.397 4.491 4.491 0 0 1-1.307 3.497 4.491 4.491 0 0 1-3.497 1.307A4.49 4.49 0 0 1 12 21.75a4.49 4.49 0 0 1-3.397-1.549 4.49 4.49 0 0 1-3.498-1.306 4.491 4.491 0 0 1-1.307-3.498A4.49 4.49 0 0 1 2.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 0 1 1.307-3.497 4.49 4.49 0 0 1 3.497-1.307Zm7.007 6.387a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+          </svg>
+          NUEVO REGISTRO DE VEHÍCULO
+      </h5>
+    <button type="button" data-modal-dismiss="modal-create-product" aria-controls="modal-create-product" class="absolute top-2.5 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      <span class="sr-only">Close menu</span>
     </button>
-    <form action="#">
-        <div class="space-y-4">
-            <div>
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                <input type="text" name="title" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
+      <form action="#">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+              <label for="brand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+              <select id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                <option value="" selected>Seleccionar una marca</option>
+              </select>
+          </div>
+          <div>
+            <label for="models" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelo</label>
+            <select id="models" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+              <option selected="">Seleccionar un modelo</option>
+            </select>
+          </div>
+          <div>
+            <label for="anio-fabricacion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Año de Fabricación</label>
+            <select id="anio-fabricacion" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                <option value="" selected>Seleccionar año</option>
+            </select>
+        </div>
+        <div>
+            <label for="anio-modelo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Año de Modelo</label>
+            <select id="anio-modelo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                <option value="" selected>Seleccionar año</option>
+            </select>
+        </div>
+        <div id="alert" class="hidden p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+            <span class="font-medium">Error:</span> El año de fabricación no puede ser mayor al año del modelo y la diferencia no puede ser mayor a un año.
+        </div>          
+          <!-- xd -->
+          <div>
+            <label for="color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Color</label>
+            <input type="text" id="color" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresa el color" required="">
+          </div>
+          <div>
+            <label for="placa_rodaje" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Placa</label>
+            <input type="text" id="placa_rodaje" maxlength="6" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="######" required="" style="text-transform: uppercase;">
+          </div> 
+          <div>
+            <label for="numero_serie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">N° de serie</label>
+            <input type="text" id="numero_serie" maxlength="17" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="#################" required="" style="text-transform: uppercase;">
+          </div>
+          <div>
+            <label for="numero_motor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">N° de motor</label>
+            <input type="text" id="numero_motor" maxlength="12" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="############" required="" style="text-transform: uppercase;">
+          </div>
+          <div>
+            <label for="precio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio (S/.)</label>
+            <input type="number" id="precio" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="S/. 000000" required="">
+          </div>
+          <div>
+            <label for="descripcion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción</label>
+            <textarea id="description" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Información adicional sobre la moto (kilometraje, etc)"></textarea>
+          </div>
+          <div class="mb-4">
+            <div class="flex items-center justify-between">
+              <label for="documentos" class="block text-sm font-medium text-gray-900 dark:text-white">Documentos</label>
+              <button id="add-document-btn" type="button" class="p-2 rounded text-green-500 hover:text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875ZM12.75 12a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V18a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V12Z" clip-rule="evenodd" />
+                  <path d="M14.25 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Z" />
+                </svg>
+              </button>
             </div>
-
-            <div>
-                <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
-                <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
-            </div>
-            <div>
-                <label for="category-create" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Technology</label>
-                <select id="category-create" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                    <option selected="">Select category</option>
-                    <option value="FL">Flowbite</option>
-                    <option value="RE">React</option>
-                    <option value="AN">Angular</option>
-                    <option value="VU">Vue</option>
-                </select>
-            </div>
-            <div>
-                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter event description here"></textarea>
-            </div>
-            <div>
-                <label for="discount-create" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Discount</label>
-                <select id="discount-create" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                    <option selected="">No</option>
-                    <option value="5">5%</option>
-                    <option value="10">10%</option>
-                    <option value="20">20%</option>
-                    <option value="30">30%</option>
-                    <option value="40">40%</option>
-                    <option value="50">50%</option>
-                </select>
-            </div>
-            <div class="bottom-0 left-0 flex justify-center w-full pb-4 space-x-4 md:px-4 md:absolute">
-                <button type="submit" class="text-white w-full justify-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                    Add product
-                </button>
-                <button type="button" data-drawer-dismiss="drawer-create-product-default" aria-controls="drawer-create-product-default" class="inline-flex w-full justify-center text-gray-500 items-center bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+            <select id="documentos" name="documentos" multiple class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 mt-2">
+              <option value="1">SOAT</option>
+              <option value="2">Revisión técnica</option>
+              <option value="3">Otros</option>
+            </select>
+          </div>
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Documentos Seleccionados</label>
+            <ul id="selected-documents" class="list-none pl-0 text-gray-900 dark:text-white"></ul>
+          </div>
+          <div>
+            <label for="condicion" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Condición</label>
+            <select id="condicion" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                <option selected="">Seleccionar condición</option>
+                <option value="FL">Usado</option>
+                <option value="RE">Nuevo</option>
+                <option value="AN">Seminuevo</option>
+            </select>
+          </div>         
+          <div>
+            <label for="foto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagen del vehículo</label>
+            <!-- Botón para subir foto -->
+            <button
+              type="button"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              onclick="document.getElementById('fileInput').click()"
+            >
+              <svg
+                class="w-4 h-4 mr-2 -ml-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z"
+                ></path>
+                <path d="M9 13h2v5a1 1 0 11-2 0v-5z"></path>
+              </svg>
+              Subir foto
+            </button>
+            <!-- Input de archivo oculto -->
+            <input type="file" id="fileInput" class="hidden" title="Subir imagen del vehículo">
+          </div> 
+            <div class="col-span-1 md:col-span-3 flex justify-center space-x-4">
+                <button type="submit" class="text-white w-full md:w-auto justify-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                    Agregar
+                  </button>
+                  <button type="button" data-modal-dismiss="modal-create-product" aria-controls="modal-create-product" class="inline-flex w-full md:w-auto justify-center text-gray-500 items-center bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
                     <svg aria-hidden="true" class="w-5 h-5 -ml-1 sm:mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    Cancel
-                </button>
+                    Cancelar
+                  </button>
+            </div>         
+        </div>
+      </form>
+    </div>
+      <!-- Modal para agregar documentos -->
+      <div id="add-document-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md mx-4 md:mx-0">
+            <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                    <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375Z" />
+                    <path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25ZM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6Z" />
+                </svg>
+                Agregar Documento
+            </h2>
+          <form id="add-document-form">
+            <label for="new-document" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre del Documento</label>
+            <input type="text" id="new-document" name="new-document" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 mb-4" placeholder="SOAT, Revisión Técnica, etc">
+            <div class="flex justify-center space-x-2">
+              <button type="submit" class="inline-flex w-full md:w-auto justify-center text-white items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -ml-1 sm:mr-1">
+                  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                </svg>
+                Agregar
+              </button>
+              <button type="button" id="close-modal-btn" class="inline-flex w-full md:w-auto justify-center text-gray-500 items-center bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                <svg aria-hidden="true" class="w-5 h-5 -ml-1 sm:mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                Cancelar
+              </button>
             </div>
-    </form>
-</div>
+          </form>
+        </div>
+  </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const brandSelect = document.getElementById('brand');
+    const createProductButton = document.getElementById('createProductButton');
+    const modelsSelect = document.getElementById('models');
+    const documentosSelect = document.getElementById('documentos');
+    const selectedDocumentsList = document.getElementById('selected-documents');
+
+    function fetchData(url) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('La solicitud a la API falló');
+                }
+                return response.json();
+            });
+    }
+
+    function cargarMarcas() {
+        fetchData('http://127.0.0.1:5000/marcas')
+            .then(data => {
+                brandSelect.innerHTML = '<option value="" selected>Seleccionar una marca</option>';
+                data.forEach(marca => {
+                    const option = document.createElement('option');
+                    option.value = marca.id;
+                    option.textContent = marca.nombre;
+                    brandSelect.appendChild(option);
+                });
+                console.log('Opciones de marcas renderizadas');
+            })
+            .catch(error => {
+                console.error('Error al cargar marcas:', error);
+            });
+    }
+
+    function cargarModelos(marcaid) {
+        fetchData(`http://127.0.0.1:5000/modelos?marcaId=${marcaid}`)
+            .then(data => {
+                modelsSelect.innerHTML = '<option value="" selected>Seleccionar un modelo</option>';
+                data.forEach(modelo => {
+                    const option = document.createElement('option');
+                    option.value = modelo.id;
+                    option.textContent = modelo.nombre;
+                    modelsSelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar modelos:', error);
+            });
+    }
+
+    function cargarDocumentos() {
+        fetchData('http://127.0.0.1:5000/documentos')
+            .then(data => {
+                documentosSelect.innerHTML = ''; // Limpiar opciones anteriores
+                data.forEach(documento => {
+                    const option = document.createElement('option');
+                    option.value = documento.id;
+                    option.textContent = documento.nombre;
+                    documentosSelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar documentos:', error);
+            });
+    }
+
+    function actualizarDocumentosSeleccionados() {
+        const selectedOptions = Array.from(documentosSelect.selectedOptions);
+        selectedDocumentsList.innerHTML = ''; // Limpiar lista anterior
+        selectedOptions.forEach(option => {
+            const listItem = document.createElement('li');
+            listItem.textContent = option.textContent;
+            selectedDocumentsList.appendChild(listItem);
+        });
+    }
+
+    brandSelect.addEventListener('change', function() {
+        const marcaId = this.value; // Obtener ID de la marca seleccionada
+        console.log('ID de marca seleccionada:', marcaId); // Imprime el valor del ID
+        if (marcaId) {
+            cargarModelos(marcaId); // Cargar modelos para la marca seleccionada
+        } else {
+            modelsSelect.innerHTML = '<option value="" selected>Seleccionar un modelo</option>'; // Limpiar el campo de selección de modelos
+        }
+    });
+
+    documentosSelect.addEventListener('change', actualizarDocumentosSeleccionados);
+
+    createProductButton.addEventListener('click', function() {
+        console.log('Botón "Crear Producto" presionado');
+        cargarMarcas();
+        cargarDocumentos();
+    });
+
+    // Carga inicial de marcas y documentos (opcional)
+    cargarMarcas();
+    cargarDocumentos();
+});
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const motosTbody = document.getElementById('motos-tbody');
+    let marcas = {};
+    let modelos = {};
+
+    function fetchData(url) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('La solicitud a la API falló');
+                }
+                return response.json();
+            });
+    }
+    function cargarMarcas() {
+        return fetchData('http://127.0.0.1:5000/marcas')
+            .then(data => {
+                data.forEach(marca => {
+                    marcas[marca.id] = marca.nombre;
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar marcas:', error);
+            });
+    }
+
+    function cargarModelos() {
+        return fetchData('http://127.0.0.1:5000/modelos')
+            .then(data => {
+                data.forEach(modelo => {
+                    modelos[modelo.id] = {
+                        nombre: modelo.nombre,
+                    };
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar modelos:', error);
+            });
+    }
+
+    function cargarMotos() {
+        fetchData('http://127.0.0.1:5000/motos')
+            .then(data => {
+                motosTbody.innerHTML = '';
+                data.forEach(moto => {
+                    const row = document.createElement('tr');
+                    const modelo = modelos[moto.modelo_id] || {};
+                    const marcaNombre = marcas[moto.marca_id] || 'Desconocido';
+                    const modeloNombre = modelo.nombre || 'Desconocido';
+                    const anioFabricacion = moto.aniofabricacion || 'N/A';
+                    const anioModelo = moto.aniomodelo || 'N/A';
+
+                    row.className = "bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-center";
+                    row.innerHTML = `
+                        <td class="p-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
+                            </div>
+                        </td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${moto.id}</td>
+                        <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${marcaNombre}</td>
+                        <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${modeloNombre}</td>
+                        <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${moto.placa}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${anioFabricacion}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${anioModelo}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">S/. ${moto.precio}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${moto.numero_serie}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${moto.descripcion}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${moto.condicion}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                            <button type="button" id="updateProductButton" data-drawer-target="drawer-update-product-default" data-drawer-show="drawer-update-product-default" aria-controls="drawer-update-product-default" data-drawer-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>                                 
+                            </button>
+                            <button type="button" id="deleteProductButton" data-drawer-target="drawer-delete-product-default" data-drawer-show="drawer-delete-product-default" aria-controls="drawer-delete-product-default" data-drawer-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+                                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>    
+                            </button>
+                        </td>
+                    `;
+
+                    motosTbody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar motos:', error);
+            });
+    }
+
+    // Cargar marcas y modelos antes de cargar motos
+    Promise.all([cargarMarcas(), cargarModelos()]).then(cargarMotos);
+});
+</script>
+<!-- Script para desplegar años -->
+<script>
+  function YearOptions(selectId) {
+    const selectElement = document.getElementById(selectId);
+    const currentYear = new Date().getFullYear();
+    for (let year = currentYear; year >= 1980; year--) {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      selectElement.appendChild(option);
+    }
+  }
+
+  function validateYears() {
+    const anioFabricacion = parseInt(document.getElementById('anio-fabricacion').value);
+    const anioModelo = parseInt(document.getElementById('anio-modelo').value);
+    const alertElement = document.getElementById('alert');
+
+    if (anioFabricacion > anioModelo || (anioModelo - anioFabricacion) > 1) {
+      alertElement.classList.remove('hidden');
+      return false;
+    } else {
+      alertElement.classList.add('hidden');
+    }
+    return true;
+  }
+
+  document.getElementById('anio-fabricacion').addEventListener('change', validateYears);
+  document.getElementById('anio-modelo').addEventListener('change', validateYears);
+
+  YearOptions('anio-fabricacion');
+  YearOptions('anio-modelo');
+</script>
+<!-- Scripts para cerrar el modal create -->
+<script>
+            // Script para mostrar y ocultar el modal
+            document.querySelectorAll('[data-modal-toggle]').forEach(button => {
+              button.addEventListener('click', () => {
+                const modal = document.getElementById(button.getAttribute('data-modal-toggle'));
+                modal.classList.toggle('hidden');
+              });
+            });
+
+            // Script para cerrar el modal y limpiar formularios
+            document.querySelectorAll('[data-modal-dismiss]').forEach(button => {
+              button.addEventListener('click', () => {
+                const modal = document.getElementById(button.getAttribute('data-modal-dismiss'));
+                modal.classList.add('hidden');
+                
+                // Limpiar formularios dentro del modal
+                modal.querySelectorAll('form').forEach(form => form.reset());
+                
+                // Recargar la página
+                location.reload();
+              });
+            });
+</script>
+<!-- Scripts para cerrar el modal documentos -->
+<script>
+            document.getElementById('add-document-btn').addEventListener('click', function() {
+              document.getElementById('add-document-modal').classList.remove('hidden');
+            });
+
+            document.getElementById('close-modal-btn').addEventListener('click', function() {
+              document.getElementById('add-document-modal').classList.add('hidden');
+            });
+
+            document.getElementById('add-document-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              const newDocumentName = document.getElementById('new-document').value;
+              if (newDocumentName) {
+                const newOption = document.createElement('option');
+                newOption.text = newDocumentName;
+                document.getElementById('documentos').add(newOption);
+                document.getElementById('add-document-modal').classList.add('hidden');
+                document.getElementById('new-document').value = '';
+              }
+            });
+</script>
+<!-- Scripts para seleccion multiple de documentos -->
+<script>
+          document.getElementById('documentos').addEventListener('change', function() {
+            const selectedOptions = Array.from(this.selectedOptions).map(option => option.text);
+            const selectedDocumentsList = document.getElementById('selected-documents');
+            selectedDocumentsList.innerHTML = '';
+            selectedOptions.forEach(option => {
+              const li = document.createElement('li');
+              li.classList.add('flex', 'items-center', 'mb-2');
+              li.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-500 mr-2">
+                  <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                  <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                </svg>
+                ${option}
+              `;
+              selectedDocumentsList.appendChild(li);
+            });
+          });
+</script>
+
+  
+
 

@@ -10,6 +10,7 @@ params:
   authors: Themesberg
   social_image_path: images/og-image.png
 
+
 markup:
   goldmark:
     renderer:

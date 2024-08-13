@@ -1,0 +1,812 @@
+---
+title: MotoDrive - Marcas y Modelos
+description: ARISTA SECURE SOLUTIONS
+layout: dashboard
+group: crud
+---
+<div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5 dark:bg-gray-800 dark:border-gray-700">
+    <div class="w-full mb-1">
+        <div class="mb-4">
+            <nav class="flex mb-5" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 text-sm font-medium md:space-x-2">
+                  <li class="inline-flex items-center">
+                    <a href="/" class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white">
+                      <svg class="w-5 h-5 mr-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                      Inicio
+                    </a>
+                  </li>
+                  <li>
+                    <div class="flex items-center">
+                      <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                      <a href="/crud/products" class="ml-1 text-gray-700 hover:text-primary-600 md:ml-2 dark:text-gray-300 dark:hover:text-white">Vehículos</a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="flex items-center">
+                      <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                      <span class="ml-1 text-gray-400 md:ml-2 dark:text-gray-500" aria-current="page">Marca y Modelos</span>
+                    </div>
+                  </li>
+                </ol>
+            </nav>
+            <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">Todas las marcas y modelos</h1>
+        </div>
+        <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
+            <div class="flex items-center mb-4 sm:mb-0">
+                <form class="sm:pr-3" action="#" method="GET">
+                    <label for="products-search" class="sr-only">Buscar</label>
+                    <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
+                        <input type="text" name="email" id="products-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vehículo">
+                    </div>
+                </form>
+                <div class="flex items-center w-full sm:justify-end">
+                    <div class="flex pl-2 space-x-1">
+                        <a href="#" class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button id="createProductButton" class="inline-flex items-center justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800" type="button" data-modal-toggle="add-product-modal" aria-controls="add-product-modal">
+                <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                </svg>
+                Agregar
+            </button>                        
+        </div>
+    </div>
+</div>
+<div class="flex flex-col">
+    <div class="overflow-x-auto">
+        <div class="inline-block min-w-full align-middle">
+            <div class="overflow-hidden shadow">
+                <table class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600">
+                    <thead class="bg-gray-100 dark:bg-gray-700">
+                        <tr>
+                            <th scope="col" class="p-4">
+                                <div class="flex items-center">
+                                    <input id="checkbox-all" aria-describedby="checkbox-1" type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-all" class="sr-only">checkbox</label>
+                                </div>
+                            </th>
+                            <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                                N°
+                            </th>
+                            <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                                Marca
+                            </th>
+                            <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                                Modelo
+                            </th>
+                            <th scope="col" class="p-4 text-xs font-medium text-center text-gray-500 uppercase dark:text-gray-400 whitespace-nowrap">
+                                Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="marcas-modelos-tbody" class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"></tbody>
+                </table>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sticky bottom-0 right-0 items-center w-full p-4 bg-white border-t border-gray-200 sm:flex sm:justify-between dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex items-center mb-4 sm:mb-0">
+        <a href="#" id="prevPage" class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+        </a>
+        <a href="#" id="nextPage" class="inline-flex justify-center p-1 mr-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+        </a>
+        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Mostrando <span id="rangeStart" class="font-semibold text-gray-900 dark:text-white">1</span>-<span id="rangeEnd" class="font-semibold text-gray-900 dark:text-white">10</span> de <span id="totalRecords" class="font-semibold text-gray-900 dark:text-white">100</span></span>
+    </div>
+</div>
+
+<!-- Update Product Modal -->
+<div id="update-brand-modal" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-gray-800 bg-opacity-50 hidden">
+    <div class="relative w-full max-w-2xl p-4 mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+            <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-700">
+                <h3 class="text-xl font-semibold dark:text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                        <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z" clip-rule="evenodd" />
+                    </svg>
+                    ACTUALIZAR MODELO
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-700 dark:hover:text-white" data-modal-toggle="update-product-modal" aria-label="Cerrar modal">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 010-1.414z" clip-rule="evenodd"></path>
+                    </svg> 
+                </button>        
+            </div>
+            <form id="update-model-form">
+                <div class="grid grid-cols-6 gap-6 p-6">
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="brand-update" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+                        <select id="brand-update" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        </select>
+                        <input type="hidden" id="brand-update-id" name="brand-id">
+                    </div>                    
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="model-update" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelo</label>
+                        <input type="text" name="model-update" id="model-update" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresa el modelo" required>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center p-6 border-t border-gray-200 rounded-b dark:border-gray-700 space-x-4">
+                    <button type="button" id="updateModelButton" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Product Drawer -->
+<div id="drawer-delete-product-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
+    <h5 id="drawer-label" class="inline-flex items-center text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Eliminar Registro</h5>
+    <button type="button" data-drawer-dismiss="drawer-delete-product-default" aria-controls="drawer-delete-product-default" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <svg class="w-10 h-10 mt-8 mb-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <h3 class="mb-6 text-lg text-gray-500 dark:text-gray-400">Está seguro que desea eliminar este registro?</h3>
+    <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2.5 text-center mr-2 dark:focus:ring-red-900">
+        Si, Estoy seguro
+    </a>
+    <a href="#" class="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 border border-gray-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2.5 text-center dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700" data-drawer-hide="drawer-delete-product-default">
+        No, cancelar
+    </a>
+</div>
+
+
+<!-- Agregar Marca y Modelo Modal -->
+<div id="add-product-modal" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-gray-800 bg-opacity-50 hidden">
+    <div class="relative w-full max-w-2xl p-4 mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+    <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+        <!-- Modal header -->
+            <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-700">
+                <h3 class="text-xl font-semibold dark:text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                        <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z" clip-rule="evenodd" />
+                    </svg>
+                    NUEVA MARCA
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-700 dark:hover:text-white" data-modal-toggle="add-product-modal" aria-label="Cerrar modal">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 010-1.414z" clip-rule="evenodd"></path>
+                    </svg> 
+                </button>        
+            </div>
+        <!-- Modal body -->
+        <form id="create-brand-form">
+            <div class="grid grid-cols-6 gap-6 p-6">
+                <div class="col-span-6 sm:col-span-3">
+                    <label for="brand-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+                    <input type="text" name="brand-name" id="brand-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 
+                        focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                        dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresa la marca" required>
+                </div>
+                <div class="col-span-6 sm:col-span-3 flex items-end">
+                    <button id="addBrandButton" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button">Agregar Marca</button>
+                </div>
+            </div>
+        </form>        
+        <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-700">
+            <h3 class="text-xl font-semibold dark:text-white flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                    <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z" clip-rule="evenodd" />
+                </svg>
+                NUEVO MODELO
+                </h3>        
+        </div>
+            <form id="add-model-form"></form>
+                <div class="grid grid-cols-6 gap-6 p-6">
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="brand-select" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+                        <select id="brand-select" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        </select>
+                        <input type="hidden" id="brand-id" name="brand-id">
+                    </div>                    
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="model" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelo</label>
+                            <input type="text" name="model" id="model" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500   
+                                focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white   
+                                dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Ingresa el modelo" required>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center p-6 border-t border-gray-200 rounded-b dark:border-gray-700 space-x-4">
+                    <button id="addModelButton" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="button">Agregar Modelo</button>
+                    <button type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600" data-modal-toggle="add-product-modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!--- Script para manejar form de Marcas --->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addBrandButton = document.getElementById('addBrandButton');
+        const brandNameInput = document.getElementById('brand-name');
+        const brandSelect = document.getElementById('brand-select'); // Asegúrate de que este ID sea correcto
+
+        if (!addBrandButton) {
+            console.error('El botón addBrandButton no está disponible');
+            return;
+        }
+
+        if (!brandNameInput) {
+            console.error('El campo de entrada brand-name no está disponible');
+            return;
+        }
+
+        if (!brandSelect) {
+            console.error('El select de marcas no está disponible');
+            return;
+        }
+
+        function fetchData(url) {
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('La solicitud a la API falló');
+                    }
+                    return response.json();
+                });
+        }
+
+        function validarNombreUnico(nombre) {
+            return fetchData('http://127.0.0.1:5000/marcas')
+                .then(data => {
+                    console.log('Datos recibidos para validación:', data);
+                    return !data.some(marca => marca.nombre.toLowerCase() === nombre.toLowerCase());
+                });
+        }
+
+        function limpiarFormulario() {
+            brandNameInput.value = '';
+            console.log('Formulario limpiado');
+        }
+
+        function actualizarSelectMarcas() {
+            fetchData('http://127.0.0.1:5000/marcas')
+                .then(data => {
+                    brandSelect.innerHTML = '<option value="" selected>Seleccionar una marca</option>';
+                    data.forEach(marca => {
+                        const option = document.createElement('option');
+                        option.value = marca.id;
+                        option.textContent = marca.nombre;
+                        brandSelect.appendChild(option);
+                    });
+                    console.log('Select de marcas actualizado');
+                })
+                .catch(error => {
+                    console.error('Error al actualizar el select de marcas:', error);
+                });
+        }
+
+        addBrandButton.addEventListener('click', function() {
+            const brandName = brandNameInput.value.trim();
+            console.log('Nombre de la marca ingresado:', brandName);
+
+            if (!brandName) {
+                console.error('El nombre de la marca no puede estar vacío');
+                return;
+            }
+
+            validarNombreUnico(brandName)
+                .then(isUnique => {
+                    console.log('¿El nombre de la marca es único?:', isUnique);
+
+                    if (!isUnique) {
+                        console.error('El nombre de la marca ya existe');
+                        return;
+                    }
+
+                    const brandData = {
+                        nombre: brandName,
+                        estado: true
+                    };
+                    console.log('Datos de la marca a enviar:', brandData);
+
+                    fetch('http://127.0.0.1:5000/marcas', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(brandData)
+                    })
+                    .then(response => {
+                        console.log('Respuesta recibida:', response);
+                        if (!response.ok) {
+                            throw new Error('Error en la solicitud POST');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Respuesta de la API:', data);
+                        limpiarFormulario();
+                        actualizarSelectMarcas();
+                        // Aquí puedes agregar lógica adicional para manejar la respuesta de la API
+                    })
+                    .catch(error => {
+                        console.error('Error al enviar la marca:', error);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al validar el nombre de la marca:', error);
+                });
+        });
+
+        // Cargar las marcas inicialmente
+        actualizarSelectMarcas();
+    });
+</script>
+<!--- Script para manejar Form Modelos --->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const brandSelect = document.getElementById('brand-select');
+    const brandIdInput = document.getElementById('brand-id');
+    const createProductButton = document.getElementById('createProductButton');
+    const addModelButton = document.getElementById('addModelButton');
+    const modelInput = document.getElementById('model');
+    const estadoInput = document.getElementById('estado');
+    const modal = document.getElementById('add-product-modal'); // ID del modal actualizado
+    const formularioModelo = document.getElementById('add-model-form'); // ID del formulario actualizado
+
+    function fetchData(url) {
+        return fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('La solicitud a la API falló');
+                }
+                return response.json();
+            });
+    }
+
+    function cargarMarcas() {
+        console.log('Iniciando carga de marcas...');
+        fetchData('http://127.0.0.1:5000/marcas')
+            .then(data => {
+                console.log('Datos recibidos:', data);
+                brandSelect.innerHTML = '<option value="" selected>Seleccionar una marca</option>';
+                data.forEach(marca => {
+                    const option = document.createElement('option');
+                    option.value = marca.id;
+                    option.textContent = marca.nombre;
+                    brandSelect.appendChild(option);
+                    console.log('Opción añadida:', option);
+                });
+                console.log('Opciones de marcas renderizadas');
+            })
+            .catch(error => {
+                console.error('Error al cargar marcas:', error);
+            });
+    }
+
+    brandSelect.addEventListener('change', function() {
+        const selectedBrandId = brandSelect.value;
+        if (brandIdInput) {
+            brandIdInput.value = selectedBrandId;
+            console.log('ID de marca seleccionada:', selectedBrandId);
+        } else {
+            console.error('El elemento brand-id no está disponible');
+        }
+    });
+
+    createProductButton.addEventListener('click', function() {
+        console.log('Botón "Crear Producto" presionado');
+        setTimeout(() => {
+            if (brandSelect) {
+                console.log('Elemento select encontrado:', brandSelect);
+                cargarMarcas();
+            } else {
+                console.error('El elemento select no está disponible');
+            }
+        }, 100);
+    });
+
+    addModelButton.addEventListener('click', function() {
+        if (!brandIdInput) {
+            console.error('El elemento brand-id no está disponible');
+            return;
+        }
+
+        const modelData = {
+            marcaid: parseInt(brandIdInput.value),
+            nombre: modelInput.value,
+            estado: true.value
+        };
+        console.log('Datos del modelo a enviar:', modelData);
+
+        fetch('http://127.0.0.1:5000/modelos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(modelData)
+        })
+        .then(response => {
+            console.log('Respuesta recibida:', response);
+            if (!response.ok) {
+                throw new Error('Error en la solicitud POST');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Respuesta de la API:', data);
+            // Aquí puedes agregar lógica adicional para manejar la respuesta de la API
+
+            // Cerrar el modal
+            modal.style.display = 'none';
+
+            // Limpiar el formulario
+            formularioModelo.reset();
+        })
+        .catch(error => {
+            console.error('Error al enviar el modelo:', error);
+        });
+    });
+
+    // Carga inicial de marcas (opcional)
+    cargarMarcas();
+});
+</script>
+
+<script>
+    document.querySelectorAll('[data-modal-toggle]').forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.getElementById(button.getAttribute('data-modal-toggle'));
+        if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        } else {
+        modal.classList.add('hidden');
+        
+        // Limpiar formularios dentro del modal
+        modal.querySelectorAll('form').forEach(form => form.reset());
+        }
+    });
+    });
+</script>
+
+<script>
+document.getElementById('checkbox-all').addEventListener('change', function() {
+    const checkboxes = document.querySelectorAll('#marcas-modelos-tbody input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = this.checked;
+    });
+});
+
+function fetchData(url) {
+    return fetch(url)
+        .then(response => response.json())
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+function cargarMarcasYModelos() {
+    const marcasPromise = fetchData('http://127.0.0.1:5000/marcas');
+    const modelosPromise = fetchData('http://127.0.0.1:5000/modelos');
+
+    Promise.all([marcasPromise, modelosPromise])
+        .then(([marcas, modelos]) => {
+            const tbody = document.getElementById('marcas-modelos-tbody');
+            tbody.innerHTML = '';
+            let contador = 1; // Contador global
+
+            marcas.forEach(marca => {
+                const modelosDeMarca = modelos.filter(modelo => modelo.marcaid === marca.id);
+                modelosDeMarca.forEach(modelo => {
+                    const row = document.createElement('tr');
+                    row.className = "bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-center";
+                    row.innerHTML = `
+                        <td class="p-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
+                            </div>
+                        </td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">${contador++}</td>
+                        <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${marca.nombre}</td>
+                        <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${modelo.nombre}</td>
+                        <td class="p-4 text-lg text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                            <button type="button" id="updateModalButton" data-model-id="1" aria-controls="drawer-update-product-default" data-drawer-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                Modificar
+                            </button>
+                            <button type="button" id="deleteModalButton" data-model-id="1" aria-controls="drawer-delete-product-default" data-drawer-placement="right" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                                Eliminar
+                            </button>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+
+                    // Agregar evento change a cada checkbox individual
+                    row.querySelector('input[type="checkbox"]').addEventListener('change', function() {
+                        if (!this.checked) {
+                            document.getElementById('checkbox-all').checked = false;
+                        } else {
+                            const allChecked = Array.from(document.querySelectorAll('#marcas-modelos-tbody input[type="checkbox"]')).every(checkbox => checkbox.checked);
+                            document.getElementById('checkbox-all').checked = allChecked;
+                        }
+                    });
+                });
+            });
+        })
+        .catch(error => console.error('Error loading data:', error));
+}
+
+document.addEventListener('DOMContentLoaded', cargarMarcasYModelos);
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const updateModelButton = document.getElementById('updateModelButton');
+    const updateModelForm = document.getElementById('update-model-form');
+    const modal = document.getElementById('update-brand-modal');
+
+    // Función para obtener los datos del modelo desde el servidor
+    function fetchModelData(id) {
+        console.log('Fetching model data for ID:', id);
+        fetch(`http://127.0.0.1:5000/modelos/${id}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud GET');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Datos del modelo recibidos:', data);
+                document.getElementById('brand-update-id').value = data.marcaid;
+                document.getElementById('model-update').value = data.nombre;
+                // ... Llena otros campos del formulario con los datos del modelo
+            })
+            .catch(error => console.error('Error al obtener los datos del modelo:', error));
+    }
+
+    // Evento para abrir el modal y obtener los datos del modelo
+    updateModelButton.addEventListener('click', function() {
+        const modelId = this.getAttribute('data-model-id');
+        console.log('Opening modal for model ID:', modelId);
+
+        // Mostrar el modal
+        modal.classList.remove('hidden');
+
+        // Obtener los datos del modelo y llenarlos en el formulario
+        fetchModelData(modelId);
+    });
+
+    // Evento para enviar los datos del formulario actualizado
+    updateModelForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Aquí puedes agregar la lógica para enviar los datos actualizados al servidor
+        console.log('Form submitted');
+        // Cerrar el modal
+        modal.classList.add('hidden');
+    });
+});
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentPage = 1;
+        const recordsPerPage = 10;
+        let totalRecords = 100;
+    
+        function updatePagination() {
+            const rangeStart = (currentPage - 1) * recordsPerPage + 1;
+            const rangeEnd = Math.min(currentPage * recordsPerPage, totalRecords);
+            document.getElementById('rangeStart').textContent = rangeStart;
+            document.getElementById('rangeEnd').textContent = rangeEnd;
+            document.getElementById('totalRecords').textContent = totalRecords;
+        }
+    
+        function fetchRecords(page) {
+            const offset = (page - 1) * recordsPerPage;
+            fetch(`http://127.0.0.1:5000/tu_endpoint?limit=${recordsPerPage}&offset=${offset}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Aquí actualizas la tabla con los datos recibidos
+                    console.log('Datos recibidos:', data);
+                    totalRecords = data.total; // Asumiendo que la API devuelve el total de registros
+                    updatePagination();
+                })
+                .catch(error => console.error('Error al obtener los registros:', error));
+        }
+    
+        document.getElementById('prevPage').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                fetchRecords(currentPage);
+            }
+        });
+    
+        document.getElementById('nextPage').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (currentPage * recordsPerPage < totalRecords) {
+                currentPage++;
+                fetchRecords(currentPage);
+            }
+        });
+    
+        // Cargar la primera página de registros
+        fetchRecords(currentPage);
+    });
+</script>
+
+<script>
+    document.getElementById('add-product-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const marcaData = {
+        nombre: formData.get('brand')
+    };
+    const modeloData = {
+        nombre: formData.get('modelo'),
+        marcaid: null 
+    };
+
+    console.log('Datos de la marca:', marcaData);
+    console.log('Datos del modelo:', modeloData);
+
+    // Crear la marca
+    fetch('http://127.0.0.1:5000/marcas', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(marcaData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Marca creada:', data);
+        modeloData.marcaid = data.id; // Actualizar el marcaid del modelo con el id de la marca creada
+
+        // Crear el modelo
+        return fetch('http://127.0.0.1:5000/modelos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(modeloData)
+        });
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Modelo creado:', data);
+        // Aquí puedes agregar código para actualizar la interfaz de usuario o mostrar un mensaje de éxito
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Aquí puedes agregar código para manejar errores
+    });
+});
+</script>
+
+<script>
+document.getElementById('create-brand-btn').addEventListener('click', function() {
+    document.getElementById('add-brand-form').classList.remove('hidden');
+    document.getElementById('add-model-form').classList.add('hidden');
+});
+
+document.getElementById('add-model-btn').addEventListener('click', function() {
+    document.getElementById('add-brand-form').classList.add('hidden');
+    document.getElementById('add-model-form').classList.remove('hidden');
+    loadBrands(); // Cargar las marcas existentes en el select
+});
+
+document.getElementById('add-modelo').addEventListener('click', function() {
+    const container = document.getElementById('modelos-container');
+    const newModeloEntry = document.createElement('div');
+    newModeloEntry.classList.add('modelo-entry');
+    newModeloEntry.innerHTML = `
+        <input type="text" name="modelo-nombre" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingresa el modelo" required>
+    `;
+    container.appendChild(newModeloEntry);
+});
+
+document.getElementById('add-brand-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const marcaData = {
+        nombre: formData.get('brand')
+    };
+
+    fetch('http://127.0.0.1:5000/marcas', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(marcaData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Marca creada:', data);
+        // Aquí puedes agregar código para actualizar la interfaz de usuario o mostrar un mensaje de éxito
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Aquí puedes agregar código para manejar errores
+    });
+});
+
+document.getElementById('add-model-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const brandId = formData.get('brand-id');
+    const modelos = [];
+
+    const modeloEntries = document.querySelectorAll('.modelo-entry');
+    modeloEntries.forEach(entry => {
+        const modeloData = {
+            nombre: entry.querySelector('input[name="modelo-nombre"]').value,
+        };
+        modelos.push(modeloData);
+    });
+
+    const requestData = {
+        marcaid: brandId,
+        modelos: modelos
+    };
+
+    fetch('http://127.0.0.1:5000/modelos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Modelos agregados:', data);
+        // Aquí puedes agregar código para actualizar la interfaz de usuario o mostrar un mensaje de éxito
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Aquí puedes agregar código para manejar errores
+    });
+});
+
+function loadBrands() {
+    fetch('http://127.0.0.1:5000/marcas')
+    .then(response => response.json())
+    .then(data => {
+        const brandSelect = document.getElementById('brand-id');
+        brandSelect.innerHTML = ''; // Limpiar opciones existentes
+        data.forEach(brand => {
+            const option = document.createElement('option');
+            option.value = brand.id;
+            option.textContent = brand.nombre;
+            brandSelect.appendChild(option);
+        });
+    })
+    .catch((error) => {
+        console.error('Error al cargar marcas:', error);
+    });
+}
+</script>
+
+
+
+
+
+

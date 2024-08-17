@@ -1,6 +1,6 @@
 ---
 title: MotoDrive - Transacciones
-description: Get started with a free and open-source admin dashboard layout built with Tailwind CSS and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more
+description: ARISTA SECURE SOLUTIONS
 layout: dashboard
 footer: false
 ---
@@ -36,9 +36,9 @@ footer: false
         <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100 dark:divide-gray-700">
             <div class="flex items-center mb-4 sm:mb-0">
                 <form class="sm:pr-3" action="#" method="GET">
-                    <label for="products-search" class="sr-only">Buscar</label>
+                    <label for="transaction-search" class="sr-only">Buscar</label>
                     <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
-                        <input type="text" name="email" id="products-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar una transacción">
+                        <input type="text" name="email" id="transaction-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar una transacción">
                     </div>
                 </form>
                 <div class="flex items-center w-full sm:justify-end">
@@ -60,7 +60,7 @@ footer: false
             </div>
             <div class="flex items-center ml-auto space-x-2 sm:space-x-3"></div>
             <div class="flex items-center ml-auto space-x-2 sm:space-x-3">
-                <button type="button" data-modal-target="add-transaction-modal" data-modal-toggle="add-transaction-modal" class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                <button type="button" data-modal-target="add-transaction-modal" class="inline-flex items-center justify-center w-1/2 px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 sm:w-auto dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2 -ml-1">
                         <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
                         <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z" clip-rule="evenodd" />
@@ -127,6 +127,7 @@ footer: false
     </div>
 </div>
 
+<!-- Botones adicionales -->
 <div class="sticky bottom-0 right-0 items-center w-full p-4 bg-white border-t border-gray-200 sm:flex sm:justify-between dark:bg-gray-800 dark:border-gray-700">
     <div class="flex items-center mb-4 sm:mb-0">
         <a href="#" class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -149,110 +150,11 @@ footer: false
     </div>
 </div>
 
-<!-- Modal para Verificar información del contrato -->
-<div id="contratoModal" tabindex="-1" aria-hidden="true" class="hidden fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden bg-gray-900 bg-opacity-50">
-  <div class="relative w-full max-w-3xl p-4 md:p-8 lg:p-12">
-      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-          <div class="sticky top-0 bg-white dark:bg-gray-700 z-10 p-5 rounded-t border-b dark:border-gray-600">
-              <h3 class="text-center font-semibold text-gray-900 lg:text-2xl dark:text-white" style='font-family:"Times New Roman",serif;'>
-                  VERIFICAR INFORMACIÓN DEL CONTRATO
-              </h3>
-          </div>
-          <div class="p-6 max-h-[70vh] overflow-y-auto">
-            <p id="contratoInfo" class="text-base leading-relaxed text-black-500 dark:text-white mt-0 mb-0">
-                <!-- Aquí se llenará la información -->
-            </p>
-        </div>               
-          <div class="flex justify-center items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
-            <button id="confirmarBtn" type="button" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
-                    <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z" clip-rule="evenodd" />
-                </svg>
-                Descargar PDF
-            </button>
-            <button type="button" class="py-2 px-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 flex items-center" onclick="closeModal('contratoModal')">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
-                  <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-              </svg>
-              Cancelar Vista
-          </button>                     
-        </div>
-      </div>
-  </div>
-</div>
-
-<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
-
-
-
-
-<!-- Edit Transaction Drawer -->
-<div id="drawer-update-product-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
-  <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Actualizar Registro</h5>
-  <button type="button" data-drawer-dismiss="drawer-update-product-default" aria-controls="drawer-update-product-default" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
-      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-      <span class="sr-only">Close menu</span>
-  </button>
-  <form action="#">
-      <div class="space-y-4">
-          <div>
-              <label for="category-create" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
-              <select id="category-create" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                  <option selected="">Seleccionar una marca</option>
-                  <option value="FL">Honda</option>
-                  <option value="RE">Yamaha</option>
-                  <option value="AN">Wanxin</option>
-                  <option value="VU">KTM</option>
-              </select>
-          </div>
-          <div>
-              <label for="category-create" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelo</label>
-              <select id="category-create" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                  <option selected="">Seleccionar un modelo</option>
-                  <option value="FL">Flowbite</option>
-                  <option value="RE">React</option>
-                  <option value="AN">Angular</option>
-                  <option value="VU">Vue</option>
-              </select>
-          </div>
-      </div>
-      <div class="bottom-0 left-0 flex justify-center w-full pb-4 mt-4 space-x-4 sm:absolute sm:px-4 sm:mt-0">
-          <button type="submit" class="w-full justify-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-              Actualizar
-          </button>
-          <button type="button" class="w-full justify-center text-red-600 inline-flex items-center hover:text-white border border-red-600 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
-              <svg aria-hidden="true" class="w-5 h-5 mr-1 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
-              Eliminar
-          </button>
-      </div>
-  </form>
-</div>
-
-
-<!-- Delete Product Drawer -->
-<div id="drawer-delete-product-default" class="fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-label" aria-hidden="true">
-  <h5 id="drawer-label" class="inline-flex items-center text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Eliminar Registro</h5>
-  <button type="button" data-drawer-dismiss="drawer-delete-product-default" aria-controls="drawer-delete-product-default" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
-      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-      <span class="sr-only">Close menu</span>
-  </button>
-  <svg class="w-10 h-10 mt-8 mb-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-  <h3 class="mb-6 text-lg text-gray-500 dark:text-gray-400">Está seguro que desea eliminar este registro?</h3>
-  <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2.5 text-center mr-2 dark:focus:ring-red-900">
-      Si, Estoy seguro
-  </a>
-  <a href="#" class="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 border border-gray-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2.5 text-center dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700" data-drawer-hide="drawer-delete-product-default">
-      No, cancelar
-  </a>
-</div>
-
 <!-- Add Transaction Modal -->
-<div id="add-transaction-modal" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-gray-800 bg-opacity-50 hidden">
+<div id="add-transaction-modal" data-modal-target="add-transaction-modal" class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-gray-800 bg-opacity-50 hidden">
     <div class="relative w-full max-w-2xl p-4 mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
             <!-- Modal header -->
             <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-700">
                 <h3 class="text-xl font-semibold dark:text-white flex items-center">
@@ -261,675 +163,858 @@ footer: false
                     </svg>
                     NUEVA TRANSACCIÓN
                 </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-700 dark:hover:text-white" data-modal-toggle="add-transaction-modal" aria-label="Cerrar modal">
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-700 dark:hover:text-white" aria-label="Cerrar modal">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 010-1.414z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"  clip-rule="evenodd"></path>
                     </svg>  
                 </button>                
         </div>
-
-    <!-- Modal body -->
-    <div class="p-6 space-y-6">
-        <form action="#">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                    <label for="search_moto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Buscar Vehículo (N° de placa)</label>
-                    <input type="text" id="search_moto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vehiculo">
-                    <ul id="results" class="hidden mt-2"></ul>
-                    </div>
-                    <div id="selectedVehicle" class="hidden mt-4 p-4 bg-gray-100 rounded-lg"></div>
-                    <input type="hidden" id="selectedVehicleId" name="selectedVehicleId">                           
-                  <div>
-                    <label for="transaction" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de Transacción</label>
-                    <select id="transaction" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                      <option selected="">Seleccionar una opción</option>
-                      <option value="compra">Compra</option>
-                      <option value="venta">Venta</option>
-                    </select>
-                  </div>                           
-                  <div class="mb-2">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <label for="comprador_dni" class="block text-sm font-medium text-gray-900 dark:text-white">Comprador (DNI)</label>
-                            <button id="add-comprador-btn" type="button" class="ml-2 p-2 rounded text-green-500 hover:text-green-600">
-                                <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+        <!-- Modal body -->
+        <div class="p-6 space-y-6">
+            <form id="add-transaction-form">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                        <input type="text" id="comprador_dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un comprador">
-                        <ul id="results-comprador" class="hidden mt-2"></ul>
+                        <label for="search_moto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Buscar Vehículo (N° de placa)</label>
+                            <input type="text" id="search_moto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vehiculo">
+                                <ul id="results" class="hidden mt-2"></ul>
                     </div>
-                    <div id="selectedComprador" class="hidden"></div>
-                </div> 
-                <div class="mb-2">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <label for="vendedor_dni" class="block text-sm font-medium text-gray-900 dark:text-white">Vendedor (DNI)</label>
-                            <button id="add-vendedor-btn" type="button" class="ml-2 p-2 rounded text-green-500 hover:text-green-600">
-                                <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                        </div>
+                    <div id="selectedVehicle" class="hidden mt-4 p-4 bg-gray-100 rounded-lg">
                     </div>
+                        <input type="hidden" id="selectedVehicleId" name="selectedVehicleId">                           
                     <div>
-                        <input type="text" id="vendedor_dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vendedor">
-                        <ul id="results-vendedor" class="hidden mt-2"></ul>
-                    </div>
-                    <div id="selectedVendedor" class="hidden"></div>
-                </div>                         
-                <div class="col-span-1 sm:col-span-2">
-                    <label for="precio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio (S/.)</label>
-                    <input type="number" name="precio" id="precio" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="S/.000000" required>
-                  </div>              
-                  <!-- 
-                  <div class="col-span-1 sm:col-span-2">
-                    <label for="foto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contrato:</label>
-                <div class="flex justify-center">
-                
-                <button
-                    type="button"
-                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                    onclick="document.getElementById('fileInput').click()"
-                >
-                    <svg
-                    class="w-4 h-4 mr-2 -ml-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    >
-                    <path
-                        d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z"
-                    ></path>
-                    <path d="M9 13h2v5a1 1 0 11-2 0v-5z"></path>
-                    </svg>
-                    Subir Contrato
-                </button>
-                <input type="file" id="fileInput" class="hidden" title="Subir contrato">
-                </div> 
-                -->
+                        <label for="transaction" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de Transacción</label>
+                        <select id="transaction" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <option selected="">Seleccionar una opción</option>
+                        <option value="compra">Compra</option>
+                        <option value="venta">Venta</option>
+                        </select>
+                    </div>                           
+                    <div class="mb-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <label for="comprador_dni" class="block text-sm font-medium text-gray-900 dark:text-white">Comprador (DNI)</label>
+                                <button id="add-comprador-btn" data-modal-target="add-comprador-modal" type="button" class="ml-2 p-2 rounded text-green-500 hover:text-green-600">
+                                    <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" id="comprador_dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un comprador">
+                            <ul id="results-comprador" class="hidden mt-2"></ul>
+                        </div>
+                        <div id="selectedComprador" class="hidden"></div>
+                    </div> 
+                    <div class="mb-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <label for="vendedor_dni" class="block text-sm font-medium text-gray-900 dark:text-white">Vendedor (DNI)</label>
+                                <button id="add-vendedor-btn" data-modal-target="add-vendedor-modal" type="button" class="ml-2 p-2 rounded text-green-500 hover:text-green-600">
+                                    <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" id="vendedor_dni" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vendedor">
+                            <ul id="results-vendedor" class="hidden mt-2"></ul>
+                        </div>
+                        <div id="selectedVendedor" class="hidden"></div>
+                    </div>                         
+                    <div class="col-span-1 sm:col-span-2">
+                        <label for="precio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio (S/.)</label>
+                        <input type="number" name="precio" id="precio" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="S/.000000" required>
+                    </div>              
             </div>
         </form>
     </div>
     <!-- Modal footer -->
         <div class="flex items-center justify-center p-6 border-t border-gray-200 rounded-b dark:border-gray-700 space-x-4">
-            <button class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Guardar</button>
-            <button type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600" data-modal-toggle="add-transaction-modal">
+            <button id="guardar-btn" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Guardar</button>
+            <button type="button" id="close-add-transaction-modal" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
             Cancelar
             </button>
         </div>
 </div>
 
 <!-- Modal para agregar vendedor -->
-<div id="add-vendedor-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-2xl mx-4 md:mx-0">
-      <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
-          <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
-        </svg>
-        Datos del Vendedor
-      </h2>
-      <form id="add-vendedor-form">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div id="add-vendedor-modal" data-modal-target="add-vendedor-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-2xl mx-4 md:mx-0">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+            <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
+            </svg>
+            Datos del Vendedor
+        </h2>
+        <form id="add-vendedor-form">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="col-span-1">
+                    <label for="vendedor-dni" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
+                    <input type="number" id="vendedor-dni" name="vendedor-dni" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el DNI" required>
+                    <p id="vendedor-resultado" class="text-red-500 text-sm mt-2 hidden"></p>
+                </div>
+                <div class="col-span-1">
+                    <label for="vendedor-first-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre(s)</label>
+                    <input type="text" id="vendedor-first-name" name="vendedor-first-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el nombre" required>
+                </div>
+                <div class="col-span-1">
+                    <label for="vendedor-last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos</label>
+                    <input type="text" id="vendedor-last-name" name="vendedor-last-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese los apellidos" required>
+                </div>
+                <div class="col-span-1">
+                    <label for="vendedor-phone-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
+                    <input type="number" id="vendedor-phone-number" name="vendedor-phone-number" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el número de teléfono" required>
+                    <p id="vendedor-phoneError" class="text-red-500 text-sm mt-2 hidden">El teléfono debe comenzar con 9 y tener 9 dígitos.</p>
+                </div>
             <div class="col-span-1">
-                <label for="vendedor-dni" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
-                <input type="number" id="vendedor-dni" name="vendedor-dni" maxlength="8" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el DNI" required>
-                <p id="vendedor-resultado" class="text-red-500 text-sm mt-2 hidden"></p>
+                <label for="vendedor-address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
+                <input type="text" id="vendedor-address" name="vendedor-address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la dirección" required>
             </div>
             <div class="col-span-1">
-                <label for="first-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre(s)</label>
-                <input type="text" id="first-name" name="first-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el nombre" required>
+                <label for="vendedor-city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
+                <input type="text" id="vendedor-city" name="vendedor-city" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la ciudad" required>
             </div>
-            <div class="col-span-1">
-                <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos</label>
-                <input type="text" id="last-name" name="last-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese los apellidos" required>
             </div>
-            <div class="col-span-1">
-                <label for="phone-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
-                <input type="number" id="phone-number" name="phone-number" maxlength="9" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el número de teléfono" required>
-                <p id="phoneError" class="text-red-500 text-sm mt-2 hidden">El teléfono debe comenzar con 9 y tener 9 dígitos.</p>
-            </div>
-          <div class="col-span-1">
-            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-            <input type="text" id="address" name="address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la dirección" required>
-          </div>
-          <div class="col-span-1">
-            <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
-            <input type="text" id="city" name="city" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la ciudad" required>
-          </div>
+            <div id="resultado" class="mt-4 text-red-500"></div>
+            <div class="flex justify-center mt-6">
+                <button type="submit" id="add-vendedor-btn" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar</button>
+                <button type="button" id="close-vendedor-btn" class="ml-2 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancelar</button>
+            </div>          
+        </form>
         </div>
-        <div id="resultado" class="mt-4 text-red-500"></div>
-        <div class="flex justify-center mt-6">
-            <button type="submit" id="add-vendedor-btn" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar</button>
-            <button type="button" id="close-vendedor-btn" class="ml-2 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancelar</button>
-          </div>          
-      </form>
-    </div>
 </div>
 
 <!-- Modal para agregar comprador -->
-<div id="add-comprador-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-2xl mx-4 md:mx-0">
-      <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
-          <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
-        </svg>
-        Datos del Comprador
-      </h2>
-      <form id="add-comprador-form">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div id="add-comprador-modal" data-modal-target="add-comprador-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-2xl mx-4 md:mx-0">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-4 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+            <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V6.75a3 3 0 0 0-3-3h-15Zm4.125 3a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm-3.873 8.703a4.126 4.126 0 0 1 7.746 0 .75.75 0 0 1-.351.92 7.47 7.47 0 0 1-3.522.877 7.47 7.47 0 0 1-3.522-.877.75.75 0 0 1-.351-.92ZM15 8.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15ZM14.25 12a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H15a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3.75a.75.75 0 0 0 0-1.5H15Z" clip-rule="evenodd" />
+            </svg>
+            Datos del Comprador
+        </h2>
+        <form id="add-comprador-form">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="col-span-1">
+                    <label for="comprador-dni" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
+                    <input type="number" id="comprador-dni" name="comprador-dni" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el DNI" required>
+                    <p id="comprador-resultado" class="text-red-500 text-sm mt-2 hidden"></p>
+                </div>
+                <div class="col-span-1">
+                    <label for="comprador-first-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre(s)</label>
+                    <input type="text" id="comprador-first-name" name="comprador-first-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el nombre" required>
+                </div>
+                <div class="col-span-1">
+                    <label for="comprador-last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos</label>
+                    <input type="text" id="comprador-last-name" name="comprador-last-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese los apellidos" required>
+                </div>
+                <div class="col-span-1">
+                    <label for="comprador-phone-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
+                    <input type="number" id="comprador-phone-number" name="comprador-phone-number" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el número de teléfono" required>
+                    <p id="comprador-phoneError" class="text-red-500 text-sm mt-2 hidden">El teléfono debe comenzar con 9 y tener 9 dígitos.</p>
+                </div>
             <div class="col-span-1">
-                <label for="comprador-dni" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">DNI</label>
-                <input type="number" id="comprador-dni" name="comprador-dni" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el DNI" required>
-                <p id="comprador-resultado" class="text-red-500 text-sm mt-2 hidden"></p>
+                <label for="comprador-address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
+                <input type="text" id="comprador-address" name="comprador-address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la dirección" required>
             </div>
             <div class="col-span-1">
-                <label for="comprador-first-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre(s)</label>
-                <input type="text" id="comprador-first-name" name="comprador-first-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el nombre" required>
+                <label for="comprador-city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
+                <input type="text" id="comprador-city" name="comprador-city" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la ciudad" required>
             </div>
-            <div class="col-span-1">
-                <label for="comprador-last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellidos</label>
-                <input type="text" id="comprador-last-name" name="comprador-last-name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese los apellidos" required>
             </div>
-            <div class="col-span-1">
-                <label for="comprador-phone-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Teléfono</label>
-                <input type="number" id="comprador-phone-number" name="comprador-phone-number" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese el número de teléfono" required>
-                <p id="phoneError" class="text-red-500 text-sm mt-2 hidden">El teléfono debe comenzar con 9 y tener 9 dígitos.</p>
-            </div>
-          <div class="col-span-1">
-            <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Dirección</label>
-            <input type="text" id="address" name="address" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la dirección" required>
-          </div>
-          <div class="col-span-1">
-            <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
-            <input type="text" id="city" name="city" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Ingrese la ciudad" required>
-          </div>
+            <div id="resultado" class="mt-4 text-red-500"></div>
+            <div class="flex justify-center mt-6">
+                <button type="submit" id="add-comprador-btn" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar</button>
+                <button type="button" id="close-comprador-btn" class="ml-2 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancelar</button>
+            </div>          
+        </form>
         </div>
-        <div id="resultado" class="mt-4 text-red-500"></div>
-        <div class="flex justify-center mt-6">
-            <button type="submit" id="add-comprador-btn" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Agregar</button>
-            <button type="button" id="close-comprador-btn" class="ml-2 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancelar</button>
-          </div>          
-      </form>
+</div>
+
+<!-- Modal para Verificar información del contrato -->
+<div id="contratoModal" data-modal-target="contratoModal" class="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden bg-gray-900 bg-opacity-50 hidden">
+    <div class="relative w-full max-w-3xl p-4 md:p-8 lg:p-12">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="sticky top-0 bg-white dark:bg-gray-700 z-10 p-5 rounded-t border-b dark:border-gray-600">
+                <h1 class="text-center font-semibold text-gray-900 lg:text-2xl dark:text-white" style='font-family:"Times New Roman",serif;'>
+                    VERIFICAR INFORMACIÓN DEL CONTRATO
+                </h1>
+            </div>
+            <div class="p-6 max-h-[70vh] overflow-y-auto">
+                <p id="contratoInfo" class="text-base leading-relaxed text-black-500 dark:text-white mt-0 mb-0">
+                    <!-- Aquí se llenará la información -->
+                </p>
+            </div>               
+            <div class="flex justify-center items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                <button id="confirmarBtn" type="button" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                        <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.25 6a.75.75 0 0 0-1.5 0v4.94l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V9.75Z" clip-rule="evenodd" />
+                    </svg>
+                    Descargar PDF
+                </button>
+                <button type="button" id="close-contratoModal" class="py-2 px-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+                Cancelar Vista
+            </button>                     
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- Update Transaction Modal -->
+<div id="update-transaction-modal" data-modal-target="update-transaction-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto bg-gray-800 bg-opacity-50">
+    <div class="relative w-full max-w-2xl p-4 mx-auto bg-white rounded-lg shadow dark:bg-gray-800">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-700">
+                <h3 class="text-xl font-semibold dark:text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
+                        <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-12.15 12.15a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32L19.513 8.2Z" />
+                    </svg>                      
+                    MODIFICAR TRANSACCIÓN
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-700 dark:hover:text-white" aria-label="Cerrar modal">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"  clip-rule="evenodd"></path>
+                    </svg>  
+                </button>                
+        </div>
+        <!-- Modal body -->
+        <div class="p-6 space-y-6">
+            <form id="update-transaction-form">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="search_moto_edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Buscar Vehículo (N° de placa)</label>
+                            <input type="text" id="search_moto_edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vehiculo">
+                                <ul id="results_edit" class="hidden mt-2"></ul>
+                    </div>
+                    <div id="selectedVehicle_edit" class="hidden mt-4 p-4 bg-gray-100 rounded-lg">
+                    </div>
+                        <input type="hidden" id="selectedVehicleId_edit" name="selectedVehicleId_edit">                           
+                    <div>
+                        <label for="transaction_edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de Transacción</label>
+                        <select id="transaction_edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <option selected="">Seleccionar una opción</option>
+                        <option value="Compra">Compra</option>
+                        <option value="Venta">Venta</option>
+                        </select>
+                    </div>                           
+                    <div class="mb-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <label for="comprador_dni_edit" class="block text-sm font-medium text-gray-900 dark:text-white">Comprador (DNI)</label>
+                                <button id="edit-comprador-btn" type="button" class="ml-2 p-2 rounded text-green-500 hover:text-green-600">
+                                    <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" id="comprador_dni_edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un comprador">
+                            <ul id="results-comprador_edit" class="hidden mt-2"></ul>
+                        </div>
+                        <div id="selectedComprador_edit" class="hidden"></div>
+                    </div> 
+                    <div class="mb-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <label for="vendedor_dni_edit" class="block text-sm font-medium text-gray-900 dark:text-white">Vendedor (DNI)</label>
+                                <button id="edit-vendedor-btn" type="button" class="ml-2 p-2 rounded text-green-500 hover:text-green-600">
+                                    <svg class="w-5 h-5 mr-2 -ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text" id="vendedor_dni_edit" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Buscar un vendedor">
+                            <ul id="results-vendedor_edit" class="hidden mt-2"></ul>
+                        </div>
+                        <div id="selectedVendedor_edit" class="hidden"></div>
+                    </div>                         
+                    <div class="col-span-1 sm:col-span-2">
+                        <label for="precio_edit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio (S/.)</label>
+                        <input type="number" name="precio_edit" id="precio_edit" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="S/.000000" required>
+                    </div>              
+            </div>
+        </form>
+    </div>
+    <!-- Modal footer -->
+        <div class="flex items-center justify-center p-6 border-t border-gray-200 rounded-b dark:border-gray-700 space-x-4">
+            <button id="guardar-btn_edit" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Guardar</button>
+            <button type="button" id="close-update-transaction-modal" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600" data-modal-toggle="update-transaction-modal">
+            Cancelar
+            </button>
+        </div>
+</div>
+
+
+<!-- Delete Transaction Modal -->
+<div id="delete-transaction-modal" data-modal-target="delete-transaction-modal" class="hidden fixed top-0 right-0 z-40 w-full h-screen max-w-xs p-4 overflow-y-auto transition-transform translate-x-full bg-white dark:bg-gray-800" tabindex="-1" aria-hidden="true">
+    <h5 id="drawer-label" class="inline-flex items-center text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Eliminar Registro</h5>
+    <button type="button" id="close-delete-transaction-modal" aria-controls="delete-transaction-modal" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Close menu</span>
+    </button>
+    <svg class="w-10 h-10 mt-8 mb-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    <h3 class="mb-6 text-lg text-gray-500 dark:text-gray-400">¿Está seguro que desea eliminar este registro?</h3>
+    <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-3 py-2.5 text-center mr-2 dark:focus:ring-red-900">
+        Sí, estoy seguro
+    </a>
+    <a href="#" class="text-gray-900 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-primary-300 border border-gray-200 font-medium inline-flex items-center rounded-lg text-sm px-3 py-2.5 text-center dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700" data-modal-dismiss="delete-transaction-modal">
+        No, cancelar
+    </a>
+</div>
+
+<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+
 <!--- Llenar la tabla Tbody ---> 
 <script>
-  document.addEventListener('DOMContentLoaded', async () => {
-    const transaccionesResponse = await fetch('http://127.0.0.1:5000/transacciones');
-    const transacciones = await transaccionesResponse.json();
+    document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const [transaccionesResponse, motosResponse, marcasResponse, modelosResponse, personasResponse] = await Promise.all([
+            fetch('http://127.0.0.1:5000/transacciones'),
+            fetch('http://127.0.0.1:5000/motos'),
+            fetch('http://127.0.0.1:5000/marcas'),
+            fetch('http://127.0.0.1:5000/modelos'),
+            fetch('http://127.0.0.1:5000/personas')
+        ]);
 
-    const motosResponse = await fetch('http://127.0.0.1:5000/motos');
-    const motos = await motosResponse.json();
+        const [transacciones, motos, marcas, modelos, personas] = await Promise.all([
+            transaccionesResponse.json(),
+            motosResponse.json(),
+            marcasResponse.json(),
+            modelosResponse.json(),
+            personasResponse.json()
+        ]);
 
-    const marcasResponse = await fetch('http://127.0.0.1:5000/marcas');
-    const marcas = await marcasResponse.json();
+        const transaccionesTBody = document.getElementById('transacciones-tbody');
+        transaccionesTBody.innerHTML = ''; // Limpia el tbody antes de agregar nuevas filas
 
-    const modelosResponse = await fetch('http://127.0.0.1:5000/modelos');
-    const modelos = await modelosResponse.json();
+        transacciones.forEach((transaccion, index) => {
+            const moto = motos.find(m => m.id === transaccion.motoid);
+            const marca = marcas.find(m => m.id === moto.marca_id);
+            const modelo = modelos.find(m => m.id === moto.modelo_id);
+            const comprador = personas.find(p => p.id === transaccion.compradorid);
+            const vendedor = personas.find(p => p.id === transaccion.vendedorid);
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="p-4"><input type="checkbox" class="w-4 h-4"></td>
+                <td class="p-4">${index + 1}</td>
+                <td class="p-4">${marca.nombre} ${modelo.nombre} - ${moto.color}</td>
+                <td class="p-4">${comprador.nombre} ${comprador.apellidos}</td>
+                <td class="p-4">${vendedor.nombre} ${vendedor.apellidos}</td>
+                <td class="p-4">${transaccion.precio}</td>
+                <td class="p-4 text-center">${transaccion.tipotransaccion}</td>
+                <td class="p-4">${new Date(transaccion.fecha).toLocaleDateString()}</td>
+                <td class="p-4 text-m font-normal text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                    <button text-m type="button" data-modal-target="contratoModal" data-transaccion-id="${transaccion.id}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;" class="mr-2">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
+                        </svg>
+                        Generar
+                    </button></td>
+                <td class="p-4 text-m font-normal text-gray-500 dark:text-gray-400 whitespace-nowrap">
+                    <button text-m type="button" data-modal-target="update-transaction-modal" data-transaccion-id="${transaccion.id}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                        Editar
+                    </button>
+                    <button text-m type="button" data-modal-target="delete-transaction-modal" data-transaccion-id="${transaccion.id}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        Eliminar
+                    </button>
+                </td>
+            `;
+            transaccionesTBody.appendChild(row);
+        });
+
+        // Asignar eventos a los botones de abrir modal
+        document.querySelectorAll('[data-modal-target]').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const modalId = event.currentTarget.getAttribute('data-modal-target');
+                const transaccionId = event.currentTarget.getAttribute('data-transaccion-id');
+                
+                // Abre el modal específico para cada transacción
+                if (modalId === 'contratoModal') {
+                    openTransactionModal(transaccionId);
+                } else {
+                    openModal(modalId);
+                }
+            });
+        });
+
+    } catch (error) {
+        console.error('Error al cargar los datos:', error);
+    }
+
+    async function openTransactionModal(transaccionId) {
+        try {
+            const data = await getData(transaccionId);
+            const template = await loadTemplate('http://localhost:1313/plantillacontracts');
+            const contratoHTML = replaceTemplate(template, data);
+
+            const modal = document.getElementById('contratoModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.getElementById('contratoInfo').innerHTML = contratoHTML;
+            } else {
+                console.error('El modal no existe en el DOM');
+            }
+        } catch (error) {
+            console.error('Error al abrir el modal de la transacción:', error);
+        }
+    }
+
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.remove('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+            console.log('Modal abierto:', modalId);
+        } else {
+            console.error('El modal no existe en el DOM');
+        }
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('hidden');
+            modal.setAttribute('aria-hidden', 'true');
+            console.log('Modal cerrado:', modalId);
+        } else {
+            console.error('El modal no existe en el DOM');
+        }
+    }
+
+    // Cerrar el modal de contrato
+    document.getElementById('close-contratoModal').addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
+        closeModal('contratoModal');
+    });
+
+    // Cerrar el modal de Editar
+    document.getElementById('close-update-transaction-modal').addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
+        closeModal('update-transaction-modal');
+    });
+
+    // Cerrar el modal de Editar
+    document.getElementById('close-delete-transaction-modal').addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
+        closeModal('delete-transaction-modal');
+    });
+
+    // Cerrar el modal de transacción
+    document.getElementById('close-add-transaction-modal').addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
+        closeModal('add-transaction-modal');
+    });
+
+    // Cerrar el modal de vendedor
+    document.getElementById('close-vendedor-btn').addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
+        closeModal('add-vendedor-modal');
+    });
+
+    // Cerrar el modal de comprador
+    document.getElementById('close-comprador-btn').addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita la propagación del evento
+        closeModal('add-comprador-modal');
+    });
+    // Función para resetear el formulario dentro de un modal
+    function resetForm(modalId) {
+        const form = document.querySelector(`#${modalId} form`);
+        if (form) {
+            form.reset();
+            // Ocultar mensajes de error si existen
+            const errorMessages = form.querySelectorAll('.text-red-500');
+            errorMessages.forEach(error => error.classList.add('hidden'));
+            // Quitar clases de error de los inputs
+            const errorInputs = form.querySelectorAll('.border-red-500');
+            errorInputs.forEach(input => input.classList.remove('border-red-500'));
+        }
+    }
+
+        // Agregar nuevo vendedor
+        document.getElementById('add-vendedor-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const newVendedorName = document.getElementById('new-vendedor').value;
+            console.log(newVendedorName)
+            if (newVendedorName) {
+                const newOption = document.createElement('option');
+                newOption.text = newVendedorName;
+                document.getElementById('vendedor').add(newOption);
+                closeModal('add-vendedor-modal');
+                document.getElementById('new-vendedor').value = '';
+            } 
+            else {
+                console.error('El elemento con ID "new-vendedor" no existe en el DOM.');
+            }
+        });
     
-    const personasResponse = await fetch('http://127.0.0.1:5000/personas');
-    const personas = await personasResponse.json();
-
-    const transaccionesTBody = document.getElementById('transacciones-tbody');
-
-    transacciones.forEach((transaccion, index) => {
-        const moto = motos.find(m => m.id === transaccion.motoid);
-        const marca = marcas.find(m => m.id === moto.marca_id);
-        const modelo = modelos.find(m => m.id === moto.modelo_id);
-        const comprador = personas.find(p => p.id === transaccion.compradorid);
-        const vendedor = personas.find(p => p.id === transaccion.vendedorid);
-
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td class="p-4">
-                <div class="flex items-center">
-                    <input type="checkbox" class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                </div>
-            </td>
-            <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${index + 1}</td>
-            <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${marca.nombre} ${modelo.nombre} - ${moto.color}</td>
-            <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${comprador.nombre} ${comprador.apellidos}</td>
-            <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${vendedor.nombre} ${vendedor.apellidos}</td>
-            <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${transaccion.precio}</td>
-            <td class="p-4 text-lg text-center text-gray-900 dark:text-white whitespace-nowrap">${transaccion.tipotransaccion}</td>
-            <td class="p-4 text-lg text-gray-900 dark:text-white whitespace-nowrap">${new Date(transaccion.fecha).toLocaleDateString()}</td>
-            <td class="p-4">
-              <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 generarContratoBtn" data-transaccion-id="${transaccion.id}">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-2">
-                  <path fill-rule="evenodd" d="M12 2a10 10 0 1 1-10 10A10 10 0 0 1 12 2Zm1 14.59V8a1 1 0 0 0-2 0v8.59l-2.29-2.3a1 1 0 0 0-1.42 1.42l4 4a1 1 0 0 0 1.42 0l4-4a1 1 0 0 0-1.42-1.42Z" clip-rule="evenodd" />
-                </svg>
-                Generar
-              </button></td>
-            <td class="p-4"><button class="bg-red-500 text-white px-2 py-1 rounded">Eliminar</button></td>
-        `;
-        transaccionesTBody.appendChild(row);
-    });
-
-    // Agrega los event listeners después de generar las filas
-    document.querySelectorAll('.generarContratoBtn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const transaccionId = event.currentTarget.getAttribute('data-transaccion-id');
-            openTransactionModal(transaccionId);
-        });
-    });
-});
-
-// Función para cargar la plantilla HTML desde un archivo
-async function loadTemplate(url) {
-    const response = await fetch(url);
-    return response.text();
-}
-
-// Función para reemplazar los marcadores en la plantilla con los datos
-function replaceTemplate(template, data) {
-    return template.replace(/{{\s*([\w.]+)\s*}}/g, (match, key) => {
-        const keys = key.split('.');
-        let value = data;
-        keys.forEach(k => {
-            value = value ? value[k] : undefined;
-        });
-        console.log(`Reemplazando marcador: ${key} con valor: ${value}`);
-        return value !== undefined ? value : match;
-    });
-}
-
-// Función para formatear la fecha
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('es-ES', options);
-}
-
-// Función para obtener los datos de motos_documentos
-async function getMotoDocumentos(motoId) {
-    try {
-        const response = await fetch(`http://127.0.0.1:5000/motos_documentos?motoid=${motoId}`);
-        const motoDocumentos = await response.json();
-        return motoDocumentos;
-    } catch (error) {
-        console.error('Error al obtener los datos de motos_documentos:', error);
-        return null;
-    }
-}
-
-// Función para obtener los datos de documentos
-async function getDocumento(documentoId) {
-    try {
-        const response = await fetch(`http://127.0.0.1:5000/documentos/${documentoId}`);
-        const documento = await response.json();
-        return documento;
-    } catch (error) {
-        console.error('Error al obtener los datos de documentos:', error);
-        return null;
-    }
-}
-
-// Función para obtener y completar los datos de la transacción
-async function getData(transaccionId) {
-    try {
-        const transaccionResponse = await fetch(`http://127.0.0.1:5000/transacciones/${transaccionId}`);
-        const transaccion = await transaccionResponse.json();
-        console.log('Transacción:', transaccion);
-
-        const motoResponse = await fetch(`http://127.0.0.1:5000/motos/${transaccion.motoid}`);
-        const moto = await motoResponse.json();
-        console.log('Moto:', moto);
-
-        const marcaResponse = await fetch(`http://127.0.0.1:5000/marcas/${moto.marca_id}`);
-        const marca = await marcaResponse.json();
-        console.log('Marca:', marca);
-
-        const modeloResponse = await fetch(`http://127.0.0.1:5000/modelos/${moto.modelo_id}`);
-        const modelo = await modeloResponse.json();
-        console.log('Modelo:', modelo);
-
-        const compradorResponse = await fetch(`http://127.0.0.1:5000/personas/${transaccion.compradorid}`);
-        const comprador = await compradorResponse.json();
-        console.log('Comprador:', comprador);
-
-        const vendedorResponse = await fetch(`http://127.0.0.1:5000/personas/${transaccion.vendedorid}`);
-        const vendedor = await vendedorResponse.json();
-        console.log('Vendedor:', vendedor);
-
-        // Obtener los documentos asociados a la moto
-        const motoDocumentos = await getMotoDocumentos(transaccion.motoid);
-        let documentosInfo = 'No cuenta con SOAT';
-        if (motoDocumentos && motoDocumentos.length > 0) {
-            const documento = await getDocumento(motoDocumentos[0].documentoid);
-            if (documento) {
-                documentosInfo = documento.nombre;
+        // Agregar nuevo comprador
+        document.getElementById('add-comprador-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const newCompradorName = document.getElementById('new-comprador').value;
+            if (newCompradorName) {
+                const newOption = document.createElement('option');
+                newOption.text = newCompradorName;
+                document.getElementById('comprador').add(newOption);
+                closeModal('add-comprador-modal');
+                document.getElementById('new-comprador').value = '';
             }
-        }
-        console.log('Documentos Info:', documentosInfo);
-
-        return {
-            transaccion: {
-                ...transaccion,
-                fecha: formatDate(transaccion.fecha),
-                tipotransaccion: transaccion.tipotransaccion.charAt(0).toUpperCase() + transaccion.tipotransaccion.slice(1)
-            },
-            moto,
-            marca,
-            modelo,
-            comprador,
-            vendedor,
-            motos: {
-                documentos: documentosInfo
-            }
-        };
-    } catch (error) {
-        console.error('Error al obtener los datos:', error);
-        throw error;
-    }
-}
-
-async function openTransactionModal(transaccionId) {
-    try {
-        const data = await getData(transaccionId);
-        console.log('Datos obtenidos:', data); // Verificar los datos obtenidos
-        const template = await loadTemplate('http://localhost:1313/plantillacontracts');
-        const contratoHTML = replaceTemplate(template, data);
-
-        const modal = document.getElementById('contratoModal');
-        if (modal) {
-            modal.classList.remove('hidden');
-            modal.setAttribute('aria-hidden', 'false');
-            document.getElementById('contratoInfo').innerHTML = contratoHTML;
-        } else {
-            console.error('El modal no existe en el DOM');
-        }
-    } catch (error) {
-        console.error('Error al obtener la transacción:', error);
-    }
-}
-
-async function openTransactionModal(transaccionId) {
-    try {
-        const data = await getData(transaccionId);
-        console.log('Datos obtenidos:', data);
-        const template = await loadTemplate('http://localhost:1313/plantillacontracts');
-        const contratoHTML = replaceTemplate(template, data);
-
-        const modal = document.getElementById('contratoModal');
-        if (modal) {
-            modal.classList.remove('hidden');
-            modal.setAttribute('aria-hidden', 'false');
-            document.getElementById('contratoInfo').innerHTML = contratoHTML;
-        } else {
-            console.error('El modal no existe en el DOM');
-        }
-    } catch (error) {
-        console.error('Error al obtener la transacción:', error);
-    }
-}
-
-async function openTransactionModal(transaccionId) {
-    try {
-        const data = await getData(transaccionId);
-        console.log('Datos obtenidos:', data);
-        const template = await loadTemplate('http://localhost:1313/plantillacontracts');
-        
-        // Convertir el tipo de transacción a mayúsculas solo para el párrafo específico
-        data.transaccion.tipotransaccionMayus = data.transaccion.tipotransaccion.toUpperCase();
-        
-        const contratoHTML = replaceTemplate(template, data);
-
-        const modal = document.getElementById('contratoModal');
-        if (modal) {
-            modal.classList.remove('hidden');
-            modal.setAttribute('aria-hidden', 'false');
-            document.getElementById('contratoInfo').innerHTML = contratoHTML;
-        } else {
-            console.error('El modal no existe en el DOM');
-        }
-    } catch (error) {
-        console.error('Error al obtener la transacción:', error);
-    }
-}
-
-// Validación del DOM completamente cargado antes de ejecutar el script
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.generarContratoBtn').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const transaccionId = event.currentTarget.getAttribute('data-transaccion-id');
-            openTransactionModal(transaccionId);
         });
-    });
+
+    // Función para cargar la plantilla HTML desde un archivo
+    async function loadTemplate(url) {
+        const response = await fetch(url);
+        return response.text();
+    }
+
+    // Función para reemplazar los marcadores en la plantilla con los datos
+    function replaceTemplate(template, data) {
+        return template.replace(/{{\s*([\w.]+)\s*}}/g, (match, key) => {
+            const keys = key.split('.');
+            let value = data;
+            keys.forEach(k => {
+                value = value ? value[k] : undefined;
+            });
+            console.log(`Reemplazando marcador: ${key} con valor: ${value}`);
+            return value !== undefined ? value : match;
+        });
+    }
+
+    // Función para formatear la fecha
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('es-ES', options);
+    }
+
+    // Función para obtener los datos de motos_documentos
+    async function getMotoDocumentos(motoId) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5000/motos_documentos?motoid=${motoId}`);
+            const motoDocumentos = await response.json();
+            return motoDocumentos;
+        } catch (error) {
+            console.error('Error al obtener los datos de motos_documentos:', error);
+            return null;
+        }
+    }
+
+    // Función para obtener los datos de documentos
+    async function getDocumento(documentoId) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5000/documentos/${documentoId}`);
+            const documento = await response.json();
+            return documento;
+        } catch (error) {
+            console.error('Error al obtener los datos de documentos:', error);
+            return null;
+        }
+    }
+
+    // Función para obtener y completar los datos de la transacción
+    async function getData(transaccionId) {
+        try {
+            const transaccionResponse = await fetch(`http://127.0.0.1:5000/transacciones/${transaccionId}`);
+            const transaccion = await transaccionResponse.json();
+            console.log('Transacción:', transaccion);
+
+            const motoResponse = await fetch(`http://127.0.0.1:5000/motos/${transaccion.motoid}`);
+            const moto = await motoResponse.json();
+            console.log('Moto:', moto);
+
+            const marcaResponse = await fetch(`http://127.0.0.1:5000/marcas/${moto.marca_id}`);
+            const marca = await marcaResponse.json();
+            console.log('Marca:', marca);
+
+            const modeloResponse = await fetch(`http://127.0.0.1:5000/modelos/${moto.modelo_id}`);
+            const modelo = await modeloResponse.json();
+            console.log('Modelo:', modelo);
+
+            const compradorResponse = await fetch(`http://127.0.0.1:5000/personas/${transaccion.compradorid}`);
+            const comprador = await compradorResponse.json();
+            console.log('Comprador:', comprador);
+
+            const vendedorResponse = await fetch(`http://127.0.0.1:5000/personas/${transaccion.vendedorid}`);
+            const vendedor = await vendedorResponse.json();
+            console.log('Vendedor:', vendedor);
+
+            // Obtener los documentos asociados a la moto
+            const motoDocumentos = await getMotoDocumentos(transaccion.motoid);
+            let documentosInfo = 'No cuenta con SOAT';
+            if (motoDocumentos && motoDocumentos.length > 0) {
+                const documento = await getDocumento(motoDocumentos[0].documentoid);
+                if (documento) {
+                    documentosInfo = documento.nombre;
+                }
+            }
+            console.log('Documentos Info:', documentosInfo);
+
+            return {
+                transaccion: {
+                    ...transaccion,
+                    fecha: formatDate(transaccion.fecha),
+                    tipotransaccion: transaccion.tipotransaccion.charAt(0).toUpperCase() + transaccion.tipotransaccion.slice(1)
+                },
+                moto,
+                marca,
+                modelo,
+                comprador,
+                vendedor,
+                motos: {
+                    documentos: documentosInfo
+                }
+            };
+        } catch (error) {
+            console.error('Error al obtener los datos:', error);
+            throw error;
+        }
+    }
 
     async function generarPDF() {
-    const element = document.getElementById('contratoInfo');
-    const opt = {
-        margin:       [0.5, 1, 1, 1], // [top, left, bottom, right]
-        filename:     'Contrato.pdf',
-        image:        { type: 'jpeg', quality: 1.0 },
-        html2canvas:  { scale: 3 },
-        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
+        console.log("Comenzando a generar el PDF");
+        const element = document.getElementById('contratoInfo');
+        const opt = {
+            margin:       [0.5, 1, 1, 1], // [top, left, bottom, right]
+            filename:     'Contrato.pdf',
+            image:        { type: 'jpeg', quality: 1.0 },
+            html2canvas:  { scale: 3 },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
 
-    // Generar el PDF
-    html2pdf().from(element).set(opt).save();
+        html2pdf().from(element).set(opt).save();
     }
 
-document.getElementById('confirmarBtn').addEventListener('click', function() {
-    // Mostrar el modal si está oculto
-    const contratoInfo = document.getElementById('contratoInfo');
-    contratoInfo.style.display = 'block';
-
-    // Esperar un momento para asegurarse de que el contenido esté renderizado
-    setTimeout(() => {
-        generarPDF();
-    }, 500);
-});
-
-
+    const confirmarBtn = document.getElementById('confirmarBtn');
+    if (confirmarBtn) {
+        confirmarBtn.addEventListener('click', function() {
+            const contratoInfo = document.getElementById('contratoInfo');
+            contratoInfo.style.display = 'block';
+            setTimeout(() => {
+                generarPDF();
+            }, 500);
+        });
+    }
 });
 </script>
 
 
 <!--- Datos para el modal principal ---> 
 <script>
-  document.addEventListener('DOMContentLoaded', async () => {
-      const searchMotoInput = document.getElementById('search_moto');
-      const resultsList = document.getElementById('results');
-      const selectedVehicleDiv = document.getElementById('selectedVehicle');
-      const selectedVehicleIdInput = document.getElementById('selectedVehicleId');
-      const precioInput = document.getElementById('precio');
-      const transactionSelect = document.getElementById('transaction');
-  
-      const searchCompradorDniInput = document.getElementById('comprador_dni');
-      const resultsCompradorList = document.getElementById('results-comprador');
-      const searchVendedorDniInput = document.getElementById('vendedor_dni');
-      const resultsVendedorList = document.getElementById('results-vendedor');
-  
-      const compradorIdInput = document.createElement('input');
-      compradorIdInput.type = 'hidden';
-      compradorIdInput.id = 'comprador_id';
-      document.body.appendChild(compradorIdInput);
-  
-      const vendedorIdInput = document.createElement('input');
-      vendedorIdInput.type = 'hidden';
-      vendedorIdInput.id = 'vendedor_id';
-      document.body.appendChild(vendedorIdInput);
-  
-      let marcas = {};
-      let modelos = {};
-  
-      // Fetch marcas and modelos
-      try {
-          const [marcasResponse, modelosResponse] = await Promise.all([
-              fetch('http://127.0.0.1:5000/marcas'),
-              fetch('http://127.0.0.1:5000/modelos')
-          ]);
-          const marcasData = await marcasResponse.json();
-          const modelosData = await modelosResponse.json();
-  
-          marcasData.forEach(marca => {
-              marcas[marca.id] = marca.nombre;
-          });
-  
-          modelosData.forEach(modelo => {
-              modelos[modelo.id] = modelo.nombre;
-          });
-      } catch (error) {
-          console.error('Error fetching marcas o modelos:', error);
-      }
-  
-      searchMotoInput.addEventListener('input', async () => {
-          const query = searchMotoInput.value.trim();
-          if (query.length >= 3) { // Realiza la búsqueda si hay al menos 3 caracteres
-              try {
-                  const response = await fetch(`http://127.0.0.1:5000/motos?placa=${query}`);
-                  const motos = await response.json();
-                  displayMotoResults(motos);
-              } catch (error) {
-                  console.error('Error fetching data:', error);
-              }
-          } else {
-              resultsList.classList.add('hidden');
-              selectedVehicleDiv.classList.add('hidden');
-          }
-      });
-  
-      const displayMotoResults = (motos) => {
-          resultsList.innerHTML = '';
-          if (motos.length > 0) {
-              motos.forEach(moto => {
-                  const listItem = document.createElement('li');
-                  listItem.textContent = `${marcas[moto.marca_id] || 'Desconocido'} ${modelos[moto.modelo_id] || 'Desconocido'}, ${moto.color}`;
-                  listItem.classList.add('cursor-pointer', 'hover:bg-gray-200', 'p-2', 'rounded');
-  
-                  listItem.addEventListener('click', () => selectVehicle(moto));
-                  resultsList.appendChild(listItem);
-              });
-              resultsList.classList.remove('hidden');
-          } else {
-              resultsList.classList.add('hidden');
-          }
-      };
-  
-      const selectVehicle = (moto) => {
-          const vehicleName = `${marcas[moto.marca_id] || 'Desconocido'} ${modelos[moto.modelo_id] || 'Desconocido'} ${[moto.color] || 'Desconocido'}`;
-          searchMotoInput.value = vehicleName;
-          selectedVehicleIdInput.value = moto.id;
-          selectedVehicleDiv.innerHTML = `
-              <h3 class="text-lg font-bold">Detalles del Vehículo</h3>
-              <p>Marca: ${marcas[moto.marca_id] || 'Desconocido'}</p>
-              <p>Modelo: ${modelos[moto.modelo_id] || 'Desconocido'}</p>
-              <p>Placa: ${moto.placa}</p>
-              <p>Número de Serie: ${moto.numero_serie}</p>
-              <p>Color: ${moto.color}</p>
-              <p>Precio: ${moto.precio}</p>
-              <p>Condición: ${moto.condicion}</p>
-              <p>Descripción: ${moto.descripcion}</p>
-          `;
-          selectedVehicleDiv.classList.remove('hidden');
-          precioInput.value = moto.precio;
-  
-          // Ocultar la lista de resultados y los detalles del vehículo
-          resultsList.classList.add('hidden');
-      };
-  
-      const validateDniInput = (input) => {
-          input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
-          if (input.value.length > 8) {
-              input.value = input.value.slice(0, 8); // Limitar a 8 dígitos
-          }
-      };
-  
-      searchCompradorDniInput.addEventListener('input', async () => {
-          validateDniInput(searchCompradorDniInput);
-          const query = searchCompradorDniInput.value.trim();
-          if (query.length === 8) { // Realiza la búsqueda si el DNI tiene 8 caracteres
-              try {
-                  const response = await fetch(`http://127.0.0.1:5000/personas?dni=${query}`);
-                  const personas = await response.json();
-                  displayDniResults(personas, 'comprador');
-              } catch (error) {
-                  console.error('Error fetching data:', error);
-              }
-          } else {
-              resultsCompradorList.classList.add('hidden');
-          }
-      });
-  
-      searchVendedorDniInput.addEventListener('input', async () => {
-          validateDniInput(searchVendedorDniInput);
-          const query = searchVendedorDniInput.value.trim();
-          if (query.length === 8) { // Realiza la búsqueda si el DNI tiene 8 caracteres
-              try {
-                  const response = await fetch(`http://127.0.0.1:5000/personas?dni=${query}`);
-                  const personas = await response.json();
-                  displayDniResults(personas, 'vendedor');
-              } catch (error) {
-                  console.error('Error fetching data:', error);
-              }
-          } else {
-              resultsVendedorList.classList.add('hidden');
-          }
-      });
-  
-      const displayDniResults = (personas, tipoPersona) => {
-          const resultsList = tipoPersona === 'comprador' ? resultsCompradorList : resultsVendedorList;
-          resultsList.innerHTML = '';
-          const filteredPersonas = personas.filter(persona => persona.tipopersona === tipoPersona && persona.dni === (tipoPersona === 'comprador' ? searchCompradorDniInput.value : searchVendedorDniInput.value));
-          if (filteredPersonas.length > 0) {
-              filteredPersonas.forEach(persona => {
-                  const listItem = document.createElement('li');
-                  listItem.textContent = `${persona.nombre} ${persona.apellidos}`;
-                  listItem.classList.add('cursor-pointer', 'hover:bg-gray-200', 'p-2', 'rounded');
-  
-                  listItem.addEventListener('click', () => selectPerson(persona, tipoPersona));
-                  resultsList.appendChild(listItem);
-              });
-              resultsList.classList.remove('hidden');
-          } else {
-              resultsList.classList.add('hidden');
-          }
-      };
-  
-      const selectPerson = (persona, tipoPersona) => {
-          const searchInput = tipoPersona === 'comprador' ? searchCompradorDniInput : searchVendedorDniInput;
-          searchInput.value = `${persona.nombre} ${persona.apellidos}`;
-          const selectedPersonDiv = document.getElementById(`selected${tipoPersona.charAt(0).toUpperCase() + tipoPersona.slice(1)}`);
-          if (selectedPersonDiv) {
-              selectedPersonDiv.innerHTML = `
-                  <h3 class="text-lg font-bold">Detalles de la Persona</h3>
-                  <p>Nombre: ${persona.nombre}</p>
-                  <p>Apellidos: ${persona.apellidos}</p>
-                  <p>DNI: ${persona.dni}</p>
-                  <p>Ciudad: ${persona.ciudad}</p>
-                  <p>Dirección: ${persona.direccion}</p>
-                  <p>Teléfono: ${persona.telefono}</p>
-              `;
-              selectedPersonDiv.classList.remove('hidden');
-  
-              // Ocultar el detalle después de 2 segundos
-              setTimeout(() => {
-                  selectedPersonDiv.classList.add('hidden');
-              }, 5000);
-          } else {
-              console.error(`Elemento con ID selected${tipoPersona.charAt(0).toUpperCase() + tipoPersona.slice(1)} no encontrado.`);
-          }
-  
-          // Guardar el ID de la persona en un campo oculto
-          const idInput = tipoPersona === 'comprador' ? compradorIdInput : vendedorIdInput;
-          idInput.value = persona.id;
-  
-          // Ocultar la lista de resultados
-          const resultsList = tipoPersona === 'comprador' ? resultsCompradorList : resultsVendedorList;
-          resultsList.classList.add('hidden');
-      };
-  
-      // Agrega el evento change al campo de selección del tipo de transacción
-      transactionSelect.addEventListener('change', () => {
-          selectedVehicleDiv.classList.add('hidden');
-          selectedVehicleIdInput.value = ''; // Limpiar el campo oculto del ID del vehículo
-      });
-  
+    document.addEventListener('DOMContentLoaded', async () => {
+        const searchMotoInput = document.getElementById('search_moto');
+        const resultsList = document.getElementById('results');
+        const selectedVehicleDiv = document.getElementById('selectedVehicle');
+        const selectedVehicleIdInput = document.getElementById('selectedVehicleId');
+        const precioInput = document.getElementById('precio');
+        const transactionSelect = document.getElementById('transaction');
+    
+        const searchCompradorDniInput = document.getElementById('comprador_dni');
+        const resultsCompradorList = document.getElementById('results-comprador');
+        const searchVendedorDniInput = document.getElementById('vendedor_dni');
+        const resultsVendedorList = document.getElementById('results-vendedor');
+    
+        const compradorIdInput = document.createElement('input');
+        compradorIdInput.type = 'hidden';
+        compradorIdInput.id = 'comprador_id';
+        document.body.appendChild(compradorIdInput);
+    
+        const vendedorIdInput = document.createElement('input');
+        vendedorIdInput.type = 'hidden';
+        vendedorIdInput.id = 'vendedor_id';
+        document.body.appendChild(vendedorIdInput);
+    
+        let marcas = {};
+        let modelos = {};
+    
+        // Fetch marcas y modelos
+        try {
+            const [marcasResponse, modelosResponse] = await Promise.all([
+                fetch('http://127.0.0.1:5000/marcas'),
+                fetch('http://127.0.0.1:5000/modelos')
+            ]);
+            const marcasData = await marcasResponse.json();
+            const modelosData = await modelosResponse.json();
+    
+            marcasData.forEach(marca => {
+                marcas[marca.id] = marca.nombre;
+            });
+    
+            modelosData.forEach(modelo => {
+                modelos[modelo.id] = modelo.nombre;
+            });
+        } catch (error) {
+            console.error('Error fetching marcas o modelos:', error);
+        }
+    
+        searchMotoInput.addEventListener('input', async () => {
+            const query = searchMotoInput.value.trim();
+            if (query.length >= 3) { // Realiza la búsqueda si hay al menos 3 caracteres
+                try {
+                    const response = await fetch(`http://127.0.0.1:5000/motos?placa=${query}`);
+                    const motos = await response.json();
+                    displayMotoResults(motos);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            } else {
+                resultsList.classList.add('hidden');
+                selectedVehicleDiv.classList.add('hidden');
+            }
+        });
+    
+        const displayMotoResults = (motos) => {
+            resultsList.innerHTML = '';
+            if (motos.length > 0) {
+                motos.forEach(moto => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${marcas[moto.marca_id] || 'Desconocido'} ${modelos[moto.modelo_id] || 'Desconocido'}, ${moto.color}`;
+                    listItem.classList.add('cursor-pointer', 'hover:bg-gray-200', 'p-2', 'rounded');
+    
+                    listItem.addEventListener('click', () => selectVehicle(moto));
+                    resultsList.appendChild(listItem);
+                });
+                resultsList.classList.remove('hidden');
+            } else {
+                resultsList.classList.add('hidden');
+            }
+        };
+    
+        const selectVehicle = (moto) => {
+            const vehicleName = `${marcas[moto.marca_id] || 'Desconocido'} ${modelos[moto.modelo_id] || 'Desconocido'} ${[moto.color] || 'Desconocido'}`;
+            searchMotoInput.value = vehicleName;
+            selectedVehicleIdInput.value = moto.id;
+            selectedVehicleDiv.innerHTML = `
+                <h3 class="text-lg font-bold">Detalles del Vehículo</h3>
+                <p>Marca: ${marcas[moto.marca_id] || 'Desconocido'}</p>
+                <p>Modelo: ${modelos[moto.modelo_id] || 'Desconocido'}</p>
+                <p>Placa: ${moto.placa}</p>
+                <p>Número de Serie: ${moto.numero_serie}</p>
+                <p>Color: ${moto.color}</p>
+                <p>Precio: ${moto.precio}</p>
+                <p>Condición: ${moto.condicion}</p>
+                <p>Descripción: ${moto.descripcion}</p>
+            `;
+            selectedVehicleDiv.classList.remove('hidden');
+            precioInput.value = moto.precio;
+    
+            // Ocultar la lista de resultados y los detalles del vehículo
+            resultsList.classList.add('hidden');
+        };
+
+        const validateDniInput = (input) => {
+            input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+            if (input.value.length > 8) {
+                input.value = input.value.slice(0, 8); // Limitar a 8 dígitos
+            }
+        };
+    
+        searchCompradorDniInput.addEventListener('input', async () => {
+            validateDniInput(searchCompradorDniInput);
+            const query = searchCompradorDniInput.value.trim();
+            if (query.length === 8) { // Realiza la búsqueda si el DNI tiene 8 caracteres
+                try {
+                    const response = await fetch(`http://127.0.0.1:5000/personas?dni=${query}`);
+                    const personas = await response.json();
+                    displayDniResults(personas, 'comprador');
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            } else {
+                resultsCompradorList.classList.add('hidden');
+            }
+        });
+    
+        searchVendedorDniInput.addEventListener('input', async () => {
+            validateDniInput(searchVendedorDniInput);
+            const query = searchVendedorDniInput.value.trim();
+            if (query.length === 8) { // Realiza la búsqueda si el DNI tiene 8 caracteres
+                try {
+                    const response = await fetch(`http://127.0.0.1:5000/personas?dni=${query}`);
+                    const personas = await response.json();
+                    displayDniResults(personas, 'vendedor');
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                }
+            } else {
+                resultsVendedorList.classList.add('hidden');
+            }
+        });
+    
+        const displayDniResults = (personas, tipoPersona) => {
+            const resultsList = tipoPersona === 'comprador' ? resultsCompradorList : resultsVendedorList;
+            resultsList.innerHTML = '';
+            const filteredPersonas = personas.filter(persona => persona.tipopersona === tipoPersona && persona.dni === (tipoPersona === 'comprador' ? searchCompradorDniInput.value : searchVendedorDniInput.value));
+            if (filteredPersonas.length > 0) {
+                filteredPersonas.forEach(persona => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${persona.nombre} ${persona.apellidos}`;
+                    listItem.classList.add('cursor-pointer', 'hover:bg-gray-200', 'p-2', 'rounded');
+    
+                    listItem.addEventListener('click', () => selectPerson(persona, tipoPersona));
+                    resultsList.appendChild(listItem);
+                });
+                resultsList.classList.remove('hidden');
+            } else {
+                resultsList.classList.add('hidden');
+            }
+        };
+    
+        const selectPerson = (persona, tipoPersona) => {
+            const searchInput = tipoPersona === 'comprador' ? searchCompradorDniInput : searchVendedorDniInput;
+            searchInput.value = `${persona.nombre} ${persona.apellidos}`;
+            const selectedPersonDiv = document.getElementById(`selected${tipoPersona.charAt(0).toUpperCase() + tipoPersona.slice(1)}`);
+            if (selectedPersonDiv) {
+                selectedPersonDiv.innerHTML = `
+                    <h3 class="text-lg font-bold">Detalles de la Persona</h3>
+                    <p>Nombre: ${persona.nombre}</p>
+                    <p>Apellidos: ${persona.apellidos}</p>
+                    <p>DNI: ${persona.dni}</p>
+                    <p>Ciudad: ${persona.ciudad}</p>
+                    <p>Dirección: ${persona.direccion}</p>
+                    <p>Teléfono: ${persona.telefono}</p>
+                `;
+                selectedPersonDiv.classList.remove('hidden');
+    
+                // Ocultar el detalle después de 5 segundos
+                setTimeout(() => {
+                    selectedPersonDiv.classList.add('hidden');
+                }, 5000);
+            } else {
+                console.error(`Elemento con ID selected${tipoPersona.charAt(0).toUpperCase() + tipoPersona.slice(1)} no encontrado.`);
+            }
+    
+            // Guardar el ID de la persona en un campo oculto
+            const idInput = tipoPersona === 'comprador' ? compradorIdInput : vendedorIdInput;
+            idInput.value = persona.id;
+    
+            // Ocultar la lista de resultados
+            const resultsList = tipoPersona === 'comprador' ? resultsCompradorList : resultsVendedorList;
+            resultsList.classList.add('hidden');
+        };
+    
+        // Agrega el evento change al campo de selección del tipo de transacción
+        transactionSelect.addEventListener('change', () => {
+            selectedVehicleDiv.classList.add('hidden');
+        });
+    
           // Validar la longitud del DNI al pegar
     searchCompradorDniInput.addEventListener('paste', (event) => {
         setTimeout(() => validateDniInput(searchCompradorDniInput), 0);
@@ -941,184 +1026,143 @@ document.getElementById('confirmarBtn').addEventListener('click', function() {
 });
 </script>
 
+<!--- Datos para enviar la solicitud POST con los datos ---> 
+<script>
+    // Enviar datos a la API
+    document.getElementById('guardar-btn').addEventListener('click', function() {
+    const motoIdPost = document.getElementById('selectedVehicleId').value;
+    const tipoTransaccion = document.getElementById('transaction').value;
+    const compradorId = document.getElementById('comprador_id').value;
+    const vendedorId = document.getElementById('vendedor_id').value;
+    const precio = document.getElementById('precio').value;
+    
+    console.log('Moto ID:', motoIdPost);
+    console.log('Tipo de Transacción:', tipoTransaccion);
+    console.log('Comprador ID:', compradorId);
+    console.log('Vendedor ID:', vendedorId);
+    console.log('Precio:', precio);
+
+    if (!motoIdPost || !tipoTransaccion) {
+        alert('Por favor, completa todos los campos requeridos.');
+        return;
+    }
+
+    const data = {
+        compradorid: compradorId,
+        estado: true,
+        motoid: motoIdPost,
+        precio: precio,
+        tipotransaccion: tipoTransaccion,
+        vendedorid: vendedorId
+    };
+
+    console.log('Datos a enviar:', data);
+
+    fetch('http://localhost:5000/transacciones', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        alert('Transacción guardada exitosamente.');
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('Hubo un error al guardar la transacción.');
+    });
+});
+</script>
+
+
 <!--- Validaciones DNI y Telefono --->  
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-      const compradorDniInput = document.getElementById('comprador-dni');
-      const compradorPhoneInput = document.getElementById('comprador-phone-number');
-      const compradorPhoneError = document.getElementById('comprador-phoneError');
-  
-      const vendedorDniInput = document.getElementById('vendedor-dni');
-      const vendedorPhoneInput = document.getElementById('vendedor-phone-number');
-      const vendedorPhoneError = document.getElementById('vendedor-phoneError');
-  
-      const validateDniInput = (input) => {
-          if (input.value.length > 8) {
-              input.value = input.value.slice(0, 8);
-          }
-      };
-  
-      const validatePhoneInput = (input, errorElement) => {
-          if (input.value.length > 9) {
-              input.value = input.value.slice(0, 9);
-          }
-  
-          const phonePattern = /^9\d{8}$/;
-          if (!phonePattern.test(input.value)) {
-              errorElement.classList.remove('hidden');
-              input.classList.add('border-red-500');
-          } else {
-              errorElement.classList.add('hidden');
-              input.classList.remove('border-red-500');
-          }
-      };
-  
-      compradorDniInput.addEventListener('input', () => validateDniInput(compradorDniInput));
-      compradorPhoneInput.addEventListener('input', () => validatePhoneInput(compradorPhoneInput, compradorPhoneError));
-  
-      vendedorDniInput.addEventListener('input', () => validateDniInput(vendedorDniInput));
-      vendedorPhoneInput.addEventListener('input', () => validatePhoneInput(vendedorPhoneInput, vendedorPhoneError));
-  });
+    document.addEventListener('DOMContentLoaded', () => {
+        const compradorDniInput = document.getElementById('comprador-dni');
+        const compradorPhoneInput = document.getElementById('comprador-phone-number');
+        const compradorPhoneError = document.getElementById('comprador-phoneError');
+    
+        const vendedorDniInput = document.getElementById('vendedor-dni');
+        const vendedorPhoneInput = document.getElementById('vendedor-phone-number');
+        const vendedorPhoneError = document.getElementById('vendedor-phoneError');
+    
+        const validateDniInput = (input) => {
+            if (input.value.length > 8) {
+                input.value = input.value.slice(0, 8);
+            }
+        };
+    
+        const validatePhoneInput = (input, errorElement) => {
+            if (input.value.length > 9) {
+                input.value = input.value.slice(0, 9);
+            }
+    
+            const phonePattern = /^9\d{8}$/;
+            if (!phonePattern.test(input.value)) {
+                errorElement.classList.remove('hidden');
+                input.classList.add('border-red-500');
+            } else {
+                errorElement.classList.add('hidden');
+                input.classList.remove('border-red-500');
+            }
+        };
+    
+        compradorDniInput.addEventListener('input', () => validateDniInput(compradorDniInput));
+        compradorPhoneInput.addEventListener('input', () => validatePhoneInput(compradorPhoneInput, compradorPhoneError));
+    
+        vendedorDniInput.addEventListener('input', () => validateDniInput(vendedorDniInput));
+        vendedorPhoneInput.addEventListener('input', () => validatePhoneInput(vendedorPhoneInput, vendedorPhoneError));
+    });
 </script>  
 
 <!--- Consultar DNI --->
 <script>
-  async function consultarDNI(dniId, firstNameId, lastNameId, resultadoId) {
-      const dni = document.getElementById(dniId).value;
-      if (/^\d{8}$/.test(dni)) {  // Verifica que el DNI tenga 8 dígitos numéricos
-          try {
-              const response = await fetch(`http://127.0.0.1:5000/consultar_dni?dni=${dni}`);
-              if (response.ok) {
-                  const data = await response.json();
-                  document.getElementById(firstNameId).value = data.nombres;
-                  document.getElementById(lastNameId).value = `${data.apellidoPaterno} ${data.apellidoMaterno}`;
-                  document.getElementById(resultadoId).classList.add('hidden');
-              } else {
-                  document.getElementById(resultadoId).innerText = 'Error al consultar el DNI';
-                  document.getElementById(resultadoId).classList.remove('hidden');
-              }
-          } catch (error) {
-              console.error('Error al consultar el DNI:', error);
-              document.getElementById(resultadoId).innerText = 'Error de conexión o el DNI no existe';
-              document.getElementById(resultadoId).classList.remove('hidden');
-          }
-      } else {
-          document.getElementById(resultadoId).innerText = 'DNI inválido';
-          document.getElementById(resultadoId).classList.remove('hidden');
-      }
-  }
-  
-  document.addEventListener('DOMContentLoaded', () => {
-      const vendedoresDNI = document.getElementById('vendedor-dni');
-      const compradoresDNI = document.getElementById('comprador-dni');
-  
-      if (vendedoresDNI) {
-          vendedoresDNI.addEventListener('blur', () => {
-              consultarDNI('vendedor-dni', 'vendedor-first-name', 'vendedor-last-name', 'vendedor-resultado');
-          });
-      }
-  
-      if (compradoresDNI) {
-          compradoresDNI.addEventListener('blur', () => {
-              consultarDNI('comprador-dni', 'comprador-first-name', 'comprador-last-name', 'comprador-resultado');
-          });
-      }
-  });
-</script> 
-
-<!-- Script para cerrar el modal principal de ADD TRANSACTION -->
-<script>
-    document.querySelectorAll('[data-modal-toggle]').forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.getElementById(button.getAttribute('data-modal-toggle'));
-        if (modal.classList.contains('hidden')) {
-        modal.classList.remove('hidden');
+    async function consultarDNI(dniId, firstNameId, lastNameId, resultadoId) {
+        const dni = document.getElementById(dniId).value;
+        if (/^\d{8}$/.test(dni)) {  // Verifica que el DNI tenga 8 dígitos numéricos
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/consultar_dni?dni=${dni}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById(firstNameId).value = data.nombres;
+                    document.getElementById(lastNameId).value = `${data.apellidoPaterno} ${data.apellidoMaterno}`;
+                    document.getElementById(resultadoId).classList.add('hidden');
+                } else {
+                    document.getElementById(resultadoId).innerText = 'Error al consultar el DNI';
+                    document.getElementById(resultadoId).classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error al consultar el DNI:', error);
+                document.getElementById(resultadoId).innerText = 'Error de conexión o el DNI no existe';
+                document.getElementById(resultadoId).classList.remove('hidden');
+            }
         } else {
-        modal.classList.add('hidden');
-        
-        // Limpiar formularios dentro del modal
-        modal.querySelectorAll('form').forEach(form => form.reset());
+            document.getElementById(resultadoId).innerText = 'DNI inválido';
+            document.getElementById(resultadoId).classList.remove('hidden');
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const vendedoresDNI = document.getElementById('vendedor-dni');
+        const compradoresDNI = document.getElementById('comprador-dni');
+    
+        if (compradoresDNI) {
+            compradoresDNI.addEventListener('blur', () => {
+                consultarDNI('comprador-dni', 'comprador-first-name', 'comprador-last-name', 'comprador-resultado');
+            });
+        }
+
+        if (vendedoresDNI) {
+            vendedoresDNI.addEventListener('blur', () => {
+                consultarDNI('vendedor-dni', 'vendedor-first-name', 'vendedor-last-name', 'vendedor-resultado');
+            });
         }
     });
-    });
-</script>
+</script> 
 
-<!-- Script para cerrar el modales -->
-<script>
-  // Función para abrir cualquier modal
-function openModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.remove('hidden');
-    } else {
-        console.error('El modal no existe en el DOM');
-    }
-}
 
-// Función para cerrar cualquier modal
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-        modal.classList.add('hidden');
-        resetForm(modalId);
-    } else {
-        console.error('El modal no existe en el DOM');
-    }
-}
-
-// Función para resetear el formulario dentro de un modal
-function resetForm(modalId) {
-    const form = document.querySelector(`#${modalId} form`);
-    if (form) {
-        form.reset();
-        // Ocultar mensajes de error si existen
-        const errorMessages = form.querySelectorAll('.text-red-500');
-        errorMessages.forEach(error => error.classList.add('hidden'));
-        // Quitar clases de error de los inputs
-        const errorInputs = form.querySelectorAll('.border-red-500');
-        errorInputs.forEach(input => input.classList.remove('border-red-500'));
-    }
-}
-
-  document.getElementById('add-vendedor-btn').addEventListener('click', function() {
-      openModal('add-vendedor-modal');
-  });
-
-  document.getElementById('close-vendedor-btn').addEventListener('click', function() {
-      closeModal('add-vendedor-modal');
-  });
-
-  document.getElementById('add-comprador-btn').addEventListener('click', function() {
-      openModal('add-comprador-modal');
-  });
-
-  document.getElementById('close-comprador-btn').addEventListener('click', function() {
-      closeModal('add-comprador-modal');
-  });
-
-  document.getElementById('add-vendedor-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const newVendedorName = document.getElementById('new-vendedor').value;
-      if (newVendedorName) {
-          const newOption = document.createElement('option');
-          newOption.text = newVendedorName;
-          document.getElementById('vendedor').add(newOption);
-          closeModal('add-vendedor-modal');
-          document.getElementById('new-vendedor').value = '';
-      }
-  });
-
-  document.getElementById('add-comprador-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const newCompradorName = document.getElementById('new-comprador').value;
-      if (newCompradorName) {
-          const newOption = document.createElement('option');
-          newOption.text = newCompradorName;
-          document.getElementById('comprador').add(newOption);
-          closeModal('add-comprador-modal');
-          document.getElementById('new-comprador').value = '';
-      }
-  });
-</script>
 
 
